@@ -5,6 +5,13 @@ body > header {
     line-height: 50px;
     font-weight: bold;
 }
+body > footer {
+    border-top: solid 1px #CCC;
+    padding: 80px;
+    margin: 0;
+    background-color: #f6f6f6;
+    font-size: .9em;
+}
 nav ul {
     list-style-type: none;
 }

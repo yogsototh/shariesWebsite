@@ -8,11 +8,20 @@ body > header {
 }
 
 /* line 8, ../src/main.scss */
+body > footer {
+  border-top: solid 1px #CCC;
+  padding: 80px;
+  margin: 0;
+  background-color: #f6f6f6;
+  font-size: .9em;
+}
+
+/* line 15, ../src/main.scss */
 nav ul {
   list-style-type: none;
 }
 
-/* line 11, ../src/main.scss */
+/* line 18, ../src/main.scss */
 nav ul li {
   display: inline-block;
   height: 50px;
@@ -21,7 +30,7 @@ nav ul li {
   border-right: solid 1px #111;
 }
 
-/* line 18, ../src/main.scss */
+/* line 25, ../src/main.scss */
 nav ul li a {
   color: #CCC;
   text-decoration: none;
@@ -33,18 +42,18 @@ nav ul li a {
   height: 100%;
 }
 
-/* line 26, ../src/main.scss */
+/* line 33, ../src/main.scss */
 nav ul li a:hover {
   color: #EEE;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* line 30, ../src/main.scss */
+/* line 37, ../src/main.scss */
 #main {
   margin: 80px auto;
 }
 
-/* line 34, ../src/main.scss */
+/* line 41, ../src/main.scss */
 #container {
   margin: 80px auto;
   border: 2px solid #800;
