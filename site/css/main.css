@@ -1,4 +1,15 @@
 /* line 1, ../src/main.scss */
+body {
+  background-color: #f6f6f6;
+}
+
+/* line 4, ../src/main.scss */
+#metacontainer {
+  border-top: 2px solid #CCC;
+  border-bottom: 1px solid #888;
+}
+
+/* line 8, ../src/main.scss */
 body > header {
   margin: 0;
   color: #CCC;
@@ -7,21 +18,22 @@ body > header {
   font-weight: bold;
 }
 
-/* line 8, ../src/main.scss */
+/* line 15, ../src/main.scss */
 body > footer {
-  border-top: solid 1px #CCC;
+  border-top: solid 2px #CCC;
   padding: 80px;
   margin: 0;
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
   font-size: .9em;
+  text-shadow: 1px 1px #fff;
 }
 
-/* line 15, ../src/main.scss */
+/* line 23, ../src/main.scss */
 nav ul {
   list-style-type: none;
 }
 
-/* line 18, ../src/main.scss */
+/* line 26, ../src/main.scss */
 nav ul li {
   display: inline-block;
   height: 50px;
@@ -30,7 +42,7 @@ nav ul li {
   border-right: solid 1px #111;
 }
 
-/* line 25, ../src/main.scss */
+/* line 33, ../src/main.scss */
 nav ul li a {
   color: #CCC;
   text-decoration: none;
@@ -42,18 +54,18 @@ nav ul li a {
   height: 100%;
 }
 
-/* line 33, ../src/main.scss */
+/* line 41, ../src/main.scss */
 nav ul li a:hover {
   color: #EEE;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* line 37, ../src/main.scss */
+/* line 45, ../src/main.scss */
 #main {
   margin: 80px auto;
 }
 
-/* line 41, ../src/main.scss */
+/* line 49, ../src/main.scss */
 #container {
   margin: 80px auto;
   border: 2px solid #800;

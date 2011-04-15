@@ -1,3 +1,10 @@
+body {
+    background-color: #f6f6f6;
+}
+#metacontainer{
+    border-top: 2px solid #CCC;
+    border-bottom: 1px solid #888;
+}
 body > header {
     margin: 0;
     color: #CCC;
@@ -6,11 +13,12 @@ body > header {
     font-weight: bold;
 }
 body > footer {
-    border-top: solid 1px #CCC;
+    border-top: solid 2px #CCC;
     padding: 80px;
     margin: 0;
-    background-color: #f6f6f6;
+    background-color: #f0f0f0;
     font-size: .9em;
+    text-shadow: 1px 1px #fff;
 }
 nav ul {
     list-style-type: none;
