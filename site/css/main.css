@@ -62,11 +62,11 @@ nav ul li a:hover {
 
 /* line 45, ../src/main.scss */
 #main {
-  margin: 80px auto;
+  margin: 0px auto;
 }
 
 /* line 49, ../src/main.scss */
 #container {
-  margin: 80px auto;
-  border: 2px solid #800;
+  margin: 0px auto;
+  border: 2px solid #DEE;
 }
