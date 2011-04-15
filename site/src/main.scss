@@ -14,9 +14,11 @@ body > header {
 }
 body > footer {
     border-top: solid 2px #CCC;
+    border-bottom: solid 1px #888;
     padding: 80px;
     margin: 0;
-    background-color: #f0f0f0;
+    bottom: 0;
+    background-color: #D0D0D0;
     font-size: .9em;
     text-shadow: 1px 1px #fff;
 }
@@ -45,8 +47,12 @@ nav ul li a:hover {
 #main {
     margin: 0px auto;
 }
-
 #container {
     margin: 0px auto;
     border: 2px solid #DEE; // for debug purpose only
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: -1px -1px 1px #333, 1px 1px 1px #FFF;
+    color: #888;
 }
