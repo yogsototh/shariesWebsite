@@ -1,5 +1,51 @@
 /* line 1, ../src/main.scss */
+body > header {
+  margin: 0;
+  color: #CCC;
+  background-color: #333;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+/* line 8, ../src/main.scss */
+nav ul {
+  list-style-type: none;
+}
+
+/* line 11, ../src/main.scss */
+nav ul li {
+  display: inline-block;
+  height: 50px;
+  margin-right: -4px;
+  border-left: solid 1px #555;
+  border-right: solid 1px #111;
+}
+
+/* line 18, ../src/main.scss */
+nav ul li a {
+  color: #CCC;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 0px;
+  margin-left: 0px;
+  text-shadow: -1px -1px #222, 1px 1px #222;
+  padding: 0 10px;
+  height: 100%;
+}
+
+/* line 26, ../src/main.scss */
+nav ul li a:hover {
+  color: #EEE;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* line 30, ../src/main.scss */
+#main {
+  margin: 80px auto;
+}
+
+/* line 34, ../src/main.scss */
 #container {
-  margin: 0 auto;
+  margin: 80px auto;
   border: 2px solid #800;
 }

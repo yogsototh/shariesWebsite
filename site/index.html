@@ -36,27 +36,28 @@
 </head>
 
 <body>
+  <header>
+    <nav id="mainnav">
+        <ul>
+            <li><a href="#">{item 1}</a></li>
+            <li><a href="#">{item 2}</a></li>
+            <li><a href="#">{item 3}</a></li>
+        </ul>
+    </nav>
+  </header>
   <div id="metacontainer">
     <div id="container">
-      <header>
+
+      <div id="main" role="main">
         <hgoup>
           <h1>{title}</h1>
           <h2>{subtitle}</h2>
         </hgroup>
-        <nav id="mainnav">
-            <ul>
-                <li><a href="#">{item 1}</a></li>
-                <li><a href="#">{item 2}</a></li>
-                <li><a href="#">{item 3}</a></li>
-            </ul>
-        </nav>
-      </header>
-      <div id="main" role="main">
         <article>
             <header>
                 <hgroup>
-                    <h2>{title}</h2>
-                    <h3>{subtitle}</h3>
+                    <h2>{article title}</h2>
+                    <h3>{article subtitle}</h3>
                 </hgroup>
             </header>
             <div class="intro">
@@ -75,13 +76,13 @@
             </footer>
         </article>
       </div>
-      <footer>
-        <div id="webpageinfo">
-            {copyright_infos}
-        </div>
-      </footer>
     </div> <!--! end of #container -->
   </div> <!--! end of #metacontainer -->
+  <footer>
+    <div id="webpageinfo">
+        {copyright_infos}
+    </div>
+  </footer>
 
 
   <!-- JavaScript at the bottom for fast page loading -->
