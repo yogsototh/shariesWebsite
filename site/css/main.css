@@ -1,24 +1,27 @@
-/* line 1, ../src/main.scss */
+/* line 5, ../src/main.scss */
 body {
   background-color: #f6f6f6;
 }
 
-/* line 4, ../src/main.scss */
+/* line 8, ../src/main.scss */
 #metacontainer {
-  border-top: 2px solid #CCC;
   border-bottom: 1px solid #888;
 }
 
-/* line 8, ../src/main.scss */
+/* line 11, ../src/main.scss */
 body > header {
   margin: 0;
   color: #CCC;
   background-color: #333;
   line-height: 50px;
   font-weight: bold;
+  -moz-box-shadow: #333333 0px 1px 5px 0;
+  -webkit-box-shadow: #333333 0px 1px 5px 0;
+  -o-box-shadow: #333333 0px 1px 5px 0;
+  box-shadow: #333333 0px 1px 5px 0;
 }
 
-/* line 15, ../src/main.scss */
+/* line 19, ../src/main.scss */
 body > footer {
   border-top: solid 2px #CCC;
   border-bottom: solid 1px #888;
@@ -28,14 +31,18 @@ body > footer {
   background-color: #D0D0D0;
   font-size: .9em;
   text-shadow: 1px 1px #fff;
+  -moz-box-shadow: #888888 0px 1px 5px 0;
+  -webkit-box-shadow: #888888 0px 1px 5px 0;
+  -o-box-shadow: #888888 0px 1px 5px 0;
+  box-shadow: #888888 0px 1px 5px 0;
 }
 
-/* line 25, ../src/main.scss */
+/* line 30, ../src/main.scss */
 nav ul {
   list-style-type: none;
 }
 
-/* line 28, ../src/main.scss */
+/* line 33, ../src/main.scss */
 nav ul li {
   display: inline-block;
   height: 50px;
@@ -44,7 +51,7 @@ nav ul li {
   border-right: solid 1px #111;
 }
 
-/* line 35, ../src/main.scss */
+/* line 40, ../src/main.scss */
 nav ul li a {
   color: #CCC;
   text-decoration: none;
@@ -56,25 +63,25 @@ nav ul li a {
   height: 100%;
 }
 
-/* line 43, ../src/main.scss */
+/* line 48, ../src/main.scss */
 nav ul li a:hover {
   color: #EEE;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* line 47, ../src/main.scss */
+/* line 52, ../src/main.scss */
 #main {
   margin: 0px auto;
 }
 
-/* line 50, ../src/main.scss */
+/* line 55, ../src/main.scss */
 #container {
   margin: 0px auto;
-  border: 2px solid #DEE;
 }
 
-/* line 55, ../src/main.scss */
+/* line 59, ../src/main.scss */
 h1, h2, h3, h4, h5, h6 {
+  font-family: Optima, sans-serif;
   text-shadow: -1px -1px 1px #333, 1px 1px 1px #FFF;
   color: #888;
 }
