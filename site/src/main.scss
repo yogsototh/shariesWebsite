@@ -10,16 +10,33 @@ $default-box-shadow-h-offset : 0px;
 // 2C5490 -> dark
 // 7689A6 -> grey
 
+$mainColor: #88AADD;
+$lightGrey: #BCD0EE;
+$light    : #A9C5EE;
+$dark     : #2C5490;
+$darkGrey : #7689A6;
+
 $backgroundColor: #f6f6f0;
 $higlightColor: #8AD;
 $higlightColorShadow: #23A;
 $topColor: #2C5490;
 $footerColor: #BCD0EE;
+$linkColor: $darkGrey;
 
 body {
     background-color: $backgroundColor;
     font-family: 'Kreon', Palatino, Georgia, arial, serif;
 }
+
+a {
+    color: $linkColor;
+    border: none;
+    text-decoration: none;
+}
+a:hover {
+    color: $higlightColor;
+}
+
 #metacontainer{
     border-bottom: 1px solid #888;
 }
@@ -58,7 +75,6 @@ nav ul li {
 }
 nav ul li a { color: rgba(255,255,255,0.8); 
             display: block;
-            text-decoration: none;
             margin-right: 0px;
             margin-left: 0px;
             text-shadow: -1px -1px rgba(0,0,0,0.2), 1px 1px rgba(0,0,0,0.2);

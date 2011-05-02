@@ -3,10 +3,10 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site: 
-  Twitter: 
-  Location: 
+  Creator: Yann Esposito
+  Site: yannesposito.com
+  Twitter: yogsototh
+  Location: France
 
 /* THANKS */
   Names (& URL): 

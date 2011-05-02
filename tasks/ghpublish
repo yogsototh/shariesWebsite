@@ -1,0 +1,55 @@
+#!/usr/bin/env zsh
+
+rootdir=$HOME/Sites/webroot
+
+function log {
+    print -P -- $*
+}
+function debug {
+    # print -- $*
+    eval $*
+}
+
+current_branch=$(git branch | egrep '^\*' | awk '{print $2}')
+
+cd $rootdir || { print -- "Unable to go to $HOME/Sites/webroot"; exit 1 }
+git co master || { exit 1 }
+git pull || { exit 1 }
+# empty regen depencies cache because of a bug
+\rm -f ./tmp/*(N)
+./tasks/recompile
+
+if git status | grep 'nothing to commit'>/dev/null 2>&1; then 
+else
+    git add .
+    git commit -m "regeneration" 
+fi
+
+# update & push gh-pages
+log "Update and push gh-pages"
+debug git co gh-pages
+(( $? == 0 )) || { exit 1 }
+debug git pull
+(( $? == 0 )) || { exit 1 }
+debug \rm -rf *(N)
+(( $? == 0 )) || { exit 1 }
+debug git co master output
+(( $? == 0 )) || { exit 1 }
+debug git unstage output
+debug mv output/index.html .
+(( $? == 0 )) || { exit 1 }
+debug mv output/Scratch/* .
+(( $? == 0 )) || { exit 1 }
+debug \rm -rf output
+(( $? == 0 )) || { exit 1 }
+debug cp site/404.html 404.html
+(( $? == 0 )) || { exit 1 }
+debug echo "yannesposito.com" > CNAME
+(( $? == 0 )) || { exit 1 }
+debug git add .
+(( $? == 0 )) || { exit 1 }
+debug git commit -m '"updated website"'
+(( $? == 0 )) || { exit 1 }
+debug git push origin gh-pages:gh-pages
+(( $? == 0 )) || { exit 1 }
+debug git co $current_branch
