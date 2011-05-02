@@ -26,7 +26,7 @@ def repair_html( html, debug=false )
             end
         else
             depth-=1
-            if (not debug) and (depth <0) 
+            if debug and (depth <0) 
                 puts 'ERROR repair_html: '
                 puts 'HTML: ' + html
                 puts '---'
@@ -40,7 +40,7 @@ def repair_html( html, debug=false )
     end
     res=html.sub(/<[^>]*$/m,'')
     depth -= 1
-    if (depth < 0) 
+    if debug and (depth < 0) 
         parents=[]
         depth=0
         html.scan( %r{<(/?)(\w*)[^>]*(/?)>} ).each do |m|
