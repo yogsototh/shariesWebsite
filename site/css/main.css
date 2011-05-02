@@ -234,4 +234,5 @@ article article h1, article article h2, article article h3, article article h4, 
 /* line 206, ../src/main.scss */
 .corps {
   margin: 48px 0;
+  line-height: 32px;
 }
