@@ -19,7 +19,7 @@ def generateMenu
     sortedChildrenByMenuPriority(home).each do |page|
         liste <<= link_to_unless_current(page[:title],page.reps[0]) 
     end   
-    "<ul><li>"+liste.join("</li>\n<li>")+"</li></ul>"
+    "<ul><li>"+liste.join("</li><li>")+"</li></ul>"
 end
 
 def depthOf(item)
