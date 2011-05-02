@@ -26,44 +26,44 @@ a img {
   border: 0;
 }
 
-/* line 1, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+/* line 3, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_18px.scss */
 .gigantic {
-  font-size: 110px;
-  line-height: 120px;
+  font-size: 123px;
+  line-height: 132px;
   letter-spacing: -2px;
 }
 
-/* line 7, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+/* line 9, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_18px.scss */
 .huge, h1 {
-  font-size: 68px;
-  line-height: 72px;
+  font-size: 76px;
+  line-height: 84px;
   letter-spacing: -1px;
 }
 
-/* line 13, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+/* line 15, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_18px.scss */
 .large, h2 {
-  font-size: 42px;
+  font-size: 47px;
   line-height: 48px;
 }
 
-/* line 18, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+/* line 20, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_18px.scss */
 .bigger, h3 {
-  font-size: 26px;
+  font-size: 29px;
   line-height: 36px;
 }
 
-/* line 23, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+/* line 25, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_18px.scss */
 .big, h4 {
-  font-size: 22px;
+  font-size: 25px;
   line-height: 30px;
 }
 
-/* line 28, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+/* line 30, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_18px.scss */
 body {
-  font: 16px/24px Georgia, serif;
+  font: 18px/24px "Times New Roman", Times, serif;
 }
 
-/* line 32, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_16px.scss */
+/* line 34, ../../../../../../var/lib/gems/1.8/gems/compass-less-plugin-1.0/stylesheets/less/typography/_18px.scss */
 .small, small {
   font-size: 13px;
   line-height: 18px;
