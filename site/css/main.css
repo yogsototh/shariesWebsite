@@ -1,28 +1,28 @@
 @charset "UTF-8";
-/* line 33, ../src/main.scss */
+/* line 34, ../src/main.scss */
 body {
   background-color: #f6f6f0;
-  font-family: 'Kreon', Palatino, Georgia, arial, serif;
+  font-family: Georgia, 'Kreon', serif;
 }
 
-/* line 38, ../src/main.scss */
+/* line 39, ../src/main.scss */
 a {
   color: #7689a6;
   border: none;
   text-decoration: none;
 }
 
-/* line 43, ../src/main.scss */
+/* line 44, ../src/main.scss */
 a:hover {
   color: #ee6666;
 }
 
-/* line 47, ../src/main.scss */
+/* line 48, ../src/main.scss */
 #metacontainer {
   border-bottom: 1px solid #888;
 }
 
-/* line 50, ../src/main.scss */
+/* line 51, ../src/main.scss */
 body > header {
   margin: 0;
   color: #CCC;
@@ -35,7 +35,7 @@ body > header {
   box-shadow: #333333 0px 1px 5px 0;
 }
 
-/* line 58, ../src/main.scss */
+/* line 59, ../src/main.scss */
 body > footer {
   border-top: solid 2px rgba(0, 0, 0, 0.1);
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
@@ -50,33 +50,43 @@ body > footer {
   -o-box-shadow: #888888 0px 1px 5px 0;
   box-shadow: #888888 0px 1px 5px 0;
 }
-/* line 68, ../src/main.scss */
+/* line 69, ../src/main.scss */
 body > footer a {
   color: #2c5490;
 }
 
-/* line 75, ../src/main.scss */
+/* line 74, ../src/main.scss */
+article > footer {
+  color: #88aadd;
+  margin: 48px 0;
+}
+/* line 77, ../src/main.scss */
+article > footer ul {
+  list-style-type: none;
+}
+
+/* line 84, ../src/main.scss */
 nav {
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 }
 
-/* line 78, ../src/main.scss */
+/* line 87, ../src/main.scss */
 nav ul {
   list-style-type: none;
 }
 
-/* line 81, ../src/main.scss */
+/* line 90, ../src/main.scss */
 nav ul li {
   display: inline-block;
   height: 50px;
   margin-right: 0;
-  width: 6em;
+  width: 8em;
   text-align: center;
   border-left: solid 1px rgba(255, 255, 255, 0.1);
   border-right: solid 1px rgba(0, 0, 0, 0.2);
 }
 
-/* line 90, ../src/main.scss */
+/* line 99, ../src/main.scss */
 nav ul li * {
   display: block;
   margin-right: 0px;
@@ -86,23 +96,23 @@ nav ul li * {
   text-shadow: -1px -1px rgba(0, 0, 0, 0.2), 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* line 98, ../src/main.scss */
+/* line 107, ../src/main.scss */
 nav ul li span.active {
-  background-color: #002233;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* line 101, ../src/main.scss */
+/* line 110, ../src/main.scss */
 nav ul li a {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* line 104, ../src/main.scss */
+/* line 113, ../src/main.scss */
 nav ul li a:hover {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* line 109, ../src/main.scss */
+/* line 118, ../src/main.scss */
 header #choixrss, header #choixlang {
   display: block;
   margin-right: 0px;
@@ -116,55 +126,55 @@ header #choixrss, header #choixlang {
   border-right: solid 1px rgba(0, 0, 0, 0.2);
 }
 
-/* line 121, ../src/main.scss */
+/* line 130, ../src/main.scss */
 header #choixrss a, header #choixlang a {
   color: #bcd0ee;
   display: block;
   height: 100%;
-  width: 6em;
+  width: 8em;
   padding: 0 10px 0 10px;
   text-align: center;
 }
 
-/* line 129, ../src/main.scss */
+/* line 138, ../src/main.scss */
 header #choixrss a:hover, header #choixlang a:hover {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* line 134, ../src/main.scss */
+/* line 143, ../src/main.scss */
 #main {
   margin: 0px auto;
 }
 
-/* line 137, ../src/main.scss */
+/* line 146, ../src/main.scss */
 #container {
   margin: 0px auto;
 }
 
-/* line 141, ../src/main.scss */
+/* line 150, ../src/main.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Expletus Sans',Futura,sans-serif;
-  text-shadow: 0px -1px 0px #2233aa, 0px 1px 0px white;
+  text-shadow: 0px -1px 0px #223366, 0px 1px 0px white;
   font-weight: bold;
   color: #88aadd;
   margin: 48px 0;
 }
 
-/* line 149, ../src/main.scss */
+/* line 158, ../src/main.scss */
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
-/* line 151, ../src/main.scss */
+/* line 160, ../src/main.scss */
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   text-shadow: 0px -1px 0px #441111, 0px 1px 0px white;
 }
 
-/* line 156, ../src/main.scss */
+/* line 165, ../src/main.scss */
 article article .date {
   float: right;
 }
-/* line 157, ../src/main.scss */
+/* line 166, ../src/main.scss */
 article article h1, article article h2, article article h3, article article h4, article article h5, article article h6 {
   text-align: left;
   font-size: 25px;
@@ -172,12 +182,56 @@ article article h1, article article h2, article article h3, article article h4, 
   margin: 0;
 }
 
-/* line 166, ../src/main.scss */
+/* line 175, ../src/main.scss */
 .intro {
   margin-bottom: 24px;
 }
 
-/* line 169, ../src/main.scss */
+/* line 178, ../src/main.scss */
 .sc {
   font-variant: small-caps;
+}
+
+/* line 182, ../src/main.scss */
+.block {
+  width: 252px;
+  margin-right: 24px;
+}
+
+/* line 185, ../src/main.scss */
+.block.right {
+  width: 252px;
+  float: right;
+}
+
+/* line 189, ../src/main.scss */
+.left {
+  float: left;
+}
+
+/* line 192, ../src/main.scss */
+.flush {
+  clear: both;
+}
+
+/* line 195, ../src/main.scss */
+.slideshow {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border-top: #223366 1px solid;
+  border-bottom: #FFF 1px solid;
+  color: #fafafa;
+  width: 80%;
+  padding: 48px;
+  margin: 48px 0;
+  background: #88aadd;
+}
+
+/* line 206, ../src/main.scss */
+.corps {
+  margin: 48px 0;
 }
