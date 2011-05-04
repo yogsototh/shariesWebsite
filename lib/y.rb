@@ -154,6 +154,7 @@ end
 
 def block(title, url, text, position="left")
     return %{<div class="block #{position}">
+        <div>
         <h3>
             <a href="#{url}"> #{title} 
                 <span class="nicer">»</span> 
@@ -162,5 +163,6 @@ def block(title, url, text, position="left")
         <p>
         #{text}
         </p>
+        <div>
     </div>}
 end

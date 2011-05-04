@@ -33,6 +33,18 @@ $topColor: #2C5490;
 $footerColor: #BCD0EE;
 $linkColor: $darkGrey;
 
+@mixin innerblock() {
+    background-color: rgba(#000,0.02);
+    @include box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset);
+    @include border-radius();
+    & > * {
+        margin: 20px;
+    }
+    &:hover {
+        background-color: rgba(#000,0.05);
+    }
+}
+
 // Height
 * {
     @include transition();
@@ -194,11 +206,22 @@ article article {
 }
 
 .block {
+    @include innerblock();
     @include column(3,false);
+    margin-bottom: 48px;
+    height: 3 * 48px ;
+    h3 {
+        text-size: .6em;
+        text-align: left;
+    }
+    cursor: pointer;
+}
+.block {
+    @include column(3);
+    float: left;
 }
 .block.right {
-    @include column(3,true);
-    float: right;
+    @include column(3);
 }
 .left {
     float: left;
@@ -212,9 +235,7 @@ article article {
     @include text-shadow(0 0 3px #000);
     font-weight: bold;
     color: #fafafa;
-    width: 80%;
-    padding: 48px;
-    margin: 48px 0;
+    @include column(9,true);
     background: $higlightColor;
 }
 
@@ -295,10 +316,5 @@ article article {
     }
 }
 .return {
-    background-color: rgba(#000,0.02);
-    @include box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset);
-    @include border-radius();
-    padding: .4em .3em .05em;
-    text-align: center;
+    @include innerblock();
 }
-.return:hover { background-color: rgba(#000,0.05); }

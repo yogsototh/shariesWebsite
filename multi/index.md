@@ -29,17 +29,28 @@ $('document').ready(function() {
 </script>
 <% end %>
 <div id="mainlinks">
-<%= block("Secure","#mainlinks","SHA1 ensure strong password generation","left secure") %>
-<%= block("Easy","#mainlinks","Remember only one master password", "left easy") %>
-<%= block("Portable","#mainlinks","Dashboard widget, Javascript applet, etc...", "left portable") %>
+<%= block("Secure","javascript:return false;","SHA1 ensure strong password generation","left secure") %>
+<%= block("Easy","javascript:return false;","Remember only one master password", "left easy") %>
+<%= block("Portable","javascript:return false;","Dashboard widget, Javascript applet, etc...", "left portable") %>
 </div>
 
 <div class="flush"></div>
 
-<div id="securecontent" class="slideshow big"> 
+<div id="securecontent" class="slideshow big"><div>
 YPassword use SHA1
+</div></div>
+
+<div id="easycontent" class="slideshow big"><div>
+You remember only one password the rest follow.
+</div></div>
+
+<div id="portablecontent" class="slideshow big">
+<div>
+    You can use YPassword on 
+    <ul>
+    <li> iPhone, </li>
+    <li> Mac using Dashboard widget, </li>
+    <li> on UNIX system using the command line <code>openssl</code> </li>
+    </ul>
 </div>
-
-<div id="easycontent" class="slideshow big"> You remember only one password the rest follow.</div>
-
-<div id="portablecontent" class="slideshow big"> You can use YPassword on iPhone, on Mac using Dashboard widget, on UNIX system using the command line <code>openssl</code></div>
+</div>
