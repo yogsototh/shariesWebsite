@@ -24,17 +24,16 @@ noSubMenu: true
     end
     last_articles=last_articles.sort { |x,y| y[:created_at] <=> x[:created_at] }[0..(number_of_articles-1)]
 
-def dArr
-    return %{<span class="nicer">&dArr;</span>}
-end
 %>
 
+<div id="elementblock">
 <ul>
-<li> <a href="#last-articles">Les <%= number_of_articles %> derniers articles <%=dArr%></a></li>
-<li> <a href="#tagcloud">Nuage de mots clés <%=dArr%></a></li>
-<li> <a href="#archives">Achives <%=dArr%></a></li>
-<li> <a href="#un-petit-mot-sur-le-contenu">Un petit mot sur le contenu <%=dArr%></a></li>
+<li> <a href="#last-articles">Les <%= number_of_articles %> derniers articles </a></li>
+<li> <a href="#tagcloud">Nuage de mots clés </a></li>
+<li> <a href="#archives">Achives </a></li>
+<li> <a href="#un-petit-mot-sur-le-contenu">Une remarque</a></li>
 </ul>
+</div>
 
 <h2 id="last-articles">
 Les <%= number_of_articles %> derniers articles

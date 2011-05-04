@@ -25,6 +25,7 @@ $darkGrey : #7689A6;
 $backgroundColor: $mainBackgroundColor;
 $hoverColor: #E66;
 $hoverColorShadow: #411;
+$titleColor: $darkGrey;
 $higlightColor: #8AD;
 $higlightColorShadow: #236;
 $selectedBlockColor: rgba(0,0,0,.1);
@@ -159,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Expletus Sans',Futura,sans-serif;
     @include text-shadow( 0px -1px 0px $higlightColorShadow, 0px 1px 0px #FFF);
     font-weight: bold;
-    color: $higlightColor;
+    color: $titleColor;
     margin: 48px 0;
 }
 nav ul li, #choixlang, #choixrss {
@@ -272,3 +273,32 @@ article article {
 .nicer {
   font-family: "Lucida Grande", Tahoma
 }
+#elementblock {
+    ul {
+        list-style-type: none;
+        li {
+            display: inline-block;
+            @include column(3,false);
+            a {
+                float: left;
+                background-color: rgba(#000,0.02);
+                @include box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset);
+                @include border-radius();
+                padding: 1em;
+                text-align: center;
+                width: 80%;
+            }
+            a:hover {
+                background-color: rgba(#000,0.05);
+            }
+        }
+    }
+}
+.return {
+    background-color: rgba(#000,0.02);
+    @include box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset);
+    @include border-radius();
+    padding: .4em .3em .05em;
+    text-align: center;
+}
+.return:hover { background-color: rgba(#000,0.05); }

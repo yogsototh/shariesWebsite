@@ -24,20 +24,19 @@ noSubMenu: true
     end
     last_articles=last_articles.sort { |x,y| y[:created_at] <=> x[:created_at] }[0..(number_of_articles-1)]
 
-def dArr
-    return %{<span class="nicer">&dArr;</span>}
-end
 %>
 
+<div id="elementblock">
 <ul>
-en: <li> <a href="#last-articles"><%= number_of_articles %> latest articles <%=dArr%></a> </li>
-fr: <li> <a href="#last-articles">Les <%= number_of_articles %> derniers articles <%=dArr%></a></li>
-en: <li> <a href="#tagcloud">Tag Cloud <%=dArr%></a></li>
-fr: <li> <a href="#tagcloud">Nuage de mots clés <%=dArr%></a></li>
-<li> <a href="#archives">Achives <%=dArr%></a></li>
-en: <li> <a href="#two-words-about-the-content">Two words about the content <%=dArr%></a></li>
-fr: <li> <a href="#un-petit-mot-sur-le-contenu">Un petit mot sur le contenu <%=dArr%></a></li>
+en: <li> <a href="#last-articles"><%= number_of_articles %> latest articles </a> </li>
+fr: <li> <a href="#last-articles">Les <%= number_of_articles %> derniers articles </a></li>
+en: <li> <a href="#tagcloud">Tag Cloud </a></li>
+fr: <li> <a href="#tagcloud">Nuage de mots clés </a></li>
+<li> <a href="#archives">Achives </a></li>
+en: <li> <a href="#two-words-about-the-content">A little remark</a></li>
+fr: <li> <a href="#un-petit-mot-sur-le-contenu">Une remarque</a></li>
 </ul>
+</div>
 
 <h2 id="last-articles">
 en: Last <%= number_of_articles %> Articles
