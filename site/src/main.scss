@@ -1,8 +1,11 @@
 $default-box-shadow-h-offset : 0px;
 @import "less/framework";
-@import "compass/css3/box-shadow";
 @import "compass/css3/border-radius";
 @import "compass/css3/font-face";
+@import "compass/css3/box-shadow";
+@import "compass/css3/transition";
+@import "compass/css3/text-shadow";
+$default-transition-duration: .5s;
 
 // Color scheme: colorschemedesigner.com
 // 88AADD -> main
@@ -11,13 +14,15 @@ $default-box-shadow-h-offset : 0px;
 // 2C5490 -> dark
 // 7689A6 -> grey
 
+$mainBackgroundColor: #DDDDE0;
+
 $mainColor: #88AADD;
 $lightGrey: #BCD0EE;
 $light    : #A9C5EE;
 $dark     : #2C5490;
 $darkGrey : #7689A6;
 
-$backgroundColor: #f6f6f0;
+$backgroundColor: $mainBackgroundColor;
 $hoverColor: #E66;
 $hoverColorShadow: #411;
 $higlightColor: #8AD;
@@ -28,12 +33,15 @@ $footerColor: #BCD0EE;
 $linkColor: $darkGrey;
 
 // Height
-
+* {
+    @include transition();
+}
 $navHeight: 50px;
 
 body {
-    background-color: $backgroundColor;
+    background: $backgroundColor;
     font-family: Georgia, 'Kreon', serif;
+    font-size: 1.2em;
 }
 
 a {
@@ -57,15 +65,15 @@ body > header {
     @include box-shadow();
 }
 body > footer {
-    border-top: solid 2px rgba(0,0,0,0.1);
+    border-top: solid 1px rgba(0,0,0,0.1);
     border-bottom: solid 1px rgba(0,0,0,0.1);
     padding: 80px;
     margin: 0;
     bottom: 0;
     background-color: $footerColor;
     font-size: .9em;
-    text-shadow: 1px 1px #fff;
-    @include box-shadow(#888);
+    @include text-shadow( 1px 1px #fff);
+    @include box-shadow(rgba(#000,0.2) 0 0 7px inset);
     a {
         color: $dark;
     }
@@ -102,7 +110,7 @@ nav ul li * {
     margin-left: 0px;
     padding: 0 10px; 
     height: 100%; 
-    text-shadow: -1px -1px rgba(0,0,0,0.2), 1px 1px rgba(0,0,0,0.2);
+    @include text-shadow( -1px -1px rgba(0,0,0,0.2), 1px 1px rgba(0,0,0,0.2));
 }
 nav ul li span.active {
     background-color: $selectedBlockColor;
@@ -120,7 +128,7 @@ header #choixrss, header #choixlang {
     margin-right: 0px;
     margin-left: 0px;
     height: 100%; 
-    text-shadow: -1px -1px rgba(0,0,0,0.2), 1px 1px rgba(0,0,0,0.2);
+    @include text-shadow( -1px -1px rgba(0,0,0,0.2), 1px 1px rgba(0,0,0,0.2));
     float: right;
     height: $navHeight;
     text-align: center;
@@ -149,16 +157,21 @@ header #choixrss a:hover, header #choixlang a:hover {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Expletus Sans',Futura,sans-serif;
-    text-shadow: 0px -1px 0px $higlightColorShadow, 0px 1px 0px #FFF;
+    @include text-shadow( 0px -1px 0px $higlightColorShadow, 0px 1px 0px #FFF);
     font-weight: bold;
     color: $higlightColor;
     margin: 48px 0;
+}
+nav ul li, #choixlang, #choixrss {
+    a:hover {
+        @include box-shadow(#337 0 0 8px inset);
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
     a:hover {
-        text-shadow: 0px -1px 0px $hoverColorShadow, 0px 1px 0px #FFF;
+        @include text-shadow( 0px -1px 0px $hoverColorShadow, 0px 1px 0px #FFF);
     }
 }
 article article {
@@ -194,8 +207,9 @@ article article {
 }
 .slideshow {
     @include border-radius(5px);
-    border-top: $higlightColorShadow 1px solid;
-    border-bottom: #FFF 1px solid;
+    @include box-shadow(#FFF 0 0 3px, rgba(#000,0.3) 0 0 5px inset);
+    @include text-shadow(0 0 3px #000);
+    font-weight: bold;
     color: #fafafa;
     width: 80%;
     padding: 48px;
@@ -206,4 +220,55 @@ article article {
 .corps {
     margin: 48px 0;
     line-height: 32px;
+}
+
+.date {
+  font-size: 0.8em;
+  border: 1px solid $darkGrey;
+  text-align: center;
+  width: 4.1em;
+  line-height: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
+.date .day, .date .month, .date .year {
+  display: block;
+}
+
+.date .day {
+  float: left;
+  width: 1.7em;
+  background: $light;
+  color: $dark;
+}
+
+.date .month{
+  float: right;
+  width: 2.3em;
+  color: $light;
+  background: $dark;
+  border-left: 1px solid $mainColor;
+  }
+
+.date .year{
+  line-height: 3ex;
+  clear: both;
+  background: $higlightColorShadow;
+  color: $mainColor;
+  border-top: 1px solid $higlightColorShadow;
+  }
+
+.archive {
+    background-color: rgba(#000,0.02);
+    @include box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset);
+    @include border-radius();
+    padding: 2em;
+}
+.tag {
+    cursor: pointer;
+}
+.nicer {
+  font-family: "Lucida Grande", Tahoma
 }

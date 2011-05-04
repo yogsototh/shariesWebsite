@@ -7,7 +7,10 @@ fr: title: First post
 en: title: First post
 author_name: Yann Esposito
 author_uri: yannesposito.com
-# tags:
+tags:
+    - test
+    - article
+fr:     - entry
 -----
 begindiv(intro)
 

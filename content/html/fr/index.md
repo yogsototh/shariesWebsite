@@ -43,4 +43,3 @@ YPassword use SHA1
 <div id="easycontent" class="slideshow big"> You remember only one password the rest follow.</div>
 
 <div id="portablecontent" class="slideshow big"> You can use YPassword on iPhone, on Mac using Dashboard widget, on UNIX system using the command line <code>openssl</code></div>
-

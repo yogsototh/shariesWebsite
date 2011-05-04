@@ -4,6 +4,17 @@ title: Blog
 menupriority: 2
 noSubMenu: true
 -----
+<% content_for :js do %>
+<script type="text/javascript">
+            $(document).ready( function(){$('.list').hide();$('#tagcloud a').removeAttr("href")} );
+            function tagSelected(id) {
+                $('.list').hide();
+                $('#'+id).fadeIn();
+                $('.tag.selected').removeClass('selected');
+                $('#tag_'+id).addClass('selected');
+            }
+</script>
+<% end %>
 <% 
     number_of_articles=5
     number_of_char_for_resume=800
@@ -33,8 +44,6 @@ en: Last <%= number_of_articles %> Articles
 fr: Les <%= number_of_articles %> derniers articles
 </h2>
 
-</div>
-
 <% last_articles.each do |a| %>
 <article>
     <%= calendar_for( a[:created_at], language ) %> 
@@ -46,8 +55,8 @@ fr: Les <%= number_of_articles %> derniers articles
         <div class="flush"></div>
         <div>
                 <p>
-fr:             <%= link_to(%{en lire plus <span class="nicer">»</span>}, a) %>
-en:             <%= link_to(%{Read more <span class="nicer">»</span>}, a) %>
+fr:             <%= link_to(%{en lire plus <span class="nicer">»</span>}, a, :class => "small") %>
+en:             <%= link_to(%{Read more <span class="nicer">»</span>}, a, :class => "small") %>
                 </p>
         </div>
     
@@ -57,9 +66,10 @@ en:             <%= link_to(%{Read more <span class="nicer">»</span>}, a) %>
 <% end %>
 
 <div class="corps">
-<div>
-<%= tagCloud %>
-</div>
+    <h2>Tag Cloud</h2>
+    <div>
+    <%= tagCloud %>
+    </div>
 </div>
 
 <h2 id="archives">Archives</h2>
