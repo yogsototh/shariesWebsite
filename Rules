@@ -72,7 +72,7 @@ compile '/html/*' do
     filter :footnotes
 
     if item[:kind] == 'article'
-        layout 'main'
+        layout 'article'
     elsif not item[:layout].nil?
         layout item[:layout]
     else

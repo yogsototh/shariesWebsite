@@ -82,6 +82,16 @@ a:hover {
     color: $hoverColor;
 }
 
+img {
+    max-width: 100%; }
+article {
+    img {
+        @include innerblock();
+        padding: 15px;
+        @include column(4);
+    }
+}
+
 .corps {
     margin: 48px 0;
     line-height: 32px;
@@ -114,8 +124,13 @@ body > footer {
 }
 
 article > footer  {
-    color: $mainColor;
     margin: 48px 0;
+    ul {
+        list-style-type: none;
+    }
+    @include column(3);
+    @include innerblock;
+    font-size: .7em;
     ul {
         list-style-type: none;
     }
@@ -211,6 +226,7 @@ h1, h2, h3, h4, h5, h6 {
 article article {
     @include innerblock();
     .date { float: right; padding: 0; margin: 20px; }
+    margin: 24px 0;
     h1, h2, h3, h4, h5, h6 {
         text-align: left;
         font-size: 36px;
@@ -332,12 +348,14 @@ article article {
     margin: 1em 0;
 }
 
-article footer {
-    @include column(3);
-    @include innerblock;
-    font-size: .7em;
-    opacity: .6;
-    ul {
-        list-style-type: none;
+#related_articles {
+    #previous_articles {
+        @include column(4);
+        float: left;
+    }
+    #next_articles {
+        float: right;
+        text-align: right;
+        @include column(4);
     }
 }

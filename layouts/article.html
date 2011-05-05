@@ -1,183 +1,159 @@
------
------
-<% language, languages, blog, article = setItemConf %><?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <% t=tags %>
-        <% if t.length > 0 %>
-        <meta name="keywords" content="<%= t %>">
-        <% end %>
-        <link rel="shortcut icon" type="image/x-icon" href="<%=@config[:webprefix]%>/img/favicon.ico" />
-        <link rel="stylesheet" type="text/css" href="<%=@config[:webprefix]%>/assets/css/main.css" />
-        <link rel="stylesheet" type="text/css" href="<%=@config[:webprefix]%>/css/twilight.css" />
-        <link rel="stylesheet" type="text/css" href="<%=@config[:webprefix]%>/css/idc.css" />
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/yannespositocom<%= language %>"/>
-        <% 
-        languages.each do |lang|
-        item_for_lang=item_of_language(lang)
-        if not item_for_lang.nil? %>
-        <link rel="alternate" lang="<%= lang %>" xml:lang="<%= lang %>" title="<%= item_for_lang[:title] %>" type="text/html" hreflang="<%= lang %>" href="<%= item_for_lang.reps[0].path %>" /> <% 
-        end
-        end %>
-        <script type="text/javascript" src="<%=@config[:webprefix]%>/js/jquery-1.3.1.min.js"></script>
-        <script type="text/javascript" src="<%=@config[:webprefix]%>/js/jquery.cookie.js"></script>
-        <script type="text/javascript" src="<%=@config[:webprefix]%>/js/index.js"></script>
-        <!--[if lt IE 9]>
-        <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
-        <![endif]-->
-        <!-- < % if containMaths %>
-        <script type="text/javascript" src="<%=@config[:webprefix]%>/js/MathJax/MathJax.js"></script>
-        < % end %>
-        -->
-        <title><%= @item[:title] %></title>
-    </head>
-    <body lang="<%= language %>">
-        <script type="text/javascript">// <![CDATA[
-            document.write('<div id="blackpage"><img src="<%=@config[:webprefix]%>/img/loading.gif" alt="<%= tradOf(:loading) %>"/></div>');
-            // ]]>
-        </script>
+<% language, languages, blog, article = setItemConf %><!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <!-- 
+    Copyright ©Yann Esposito 2011
+    Extended from HTML5boilerplate
+  -->
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <div id="content">
+  <title><%= @item[:title] %></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <%= meta_tags %>
 
-            <div id="choix"> 
-                <div class="return"><a href="#entete">&darr; Menu &darr;</a></div>
-                <div id="choixlang">
-                    <%= languages.map do |l|
-                    dest=@item_rep.path.sub(%r{#{@config[:webprefix]}/../}, %{#{config[:webprefix]}/#{l}/}) 
-                    if @item_rep.path != dest
-                    %{<a href="#{dest}" onclick="setLanguage('#{l}')">#{ tradOfKeywordIn(:switchTo,l)}</a>}
-                    else
-                    nil
-                    end
-                    end.join() %>
-                </div>
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="<%=@config[:webprefix]%>/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+  <!-- CSS: implied media="all" -->
+  <link rel="stylesheet" href="/css/less.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Expletus+Sans:bold' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Kreon:regular,bold' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- Uncomment if you are specifically targeting less enabled mobile browsers
+  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="/js/libs/modernizr-1.7.min.js"></script>
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="<%= @config[:rss_uri][language.intern] %>"/>
+
+</head>
+
+<body lang="<%= language %>">
+  <header>
+    <div id="choixrss"><%= choixrss %></div>
+    <div id="choixlang"><%= choixlang %></div>
+    <nav id="mainnav">
+        <ul>
+            <%= generateMenu %>
+        </ul>
+    </nav>
+  </header>
+  <div id="metacontainer">
+    <div id="container">
+
+      <div id="main" role="main">
+        <hgroup>
+          <h1><%= @item[:content_for_title].nil? ? @item[:title] : @item[:content_for_title] %></h1>
+          <% unless @item[:subtitle].nil? and @item[:content_for_subtitle].nil? %> 
+          <h2>
+          <%= @item[:content_for_subtitle].nil? ? @item[:subtitle] : @item[:content_for_subtitle] %>
+          </h2>
+          <% end %>
+        </hgroup>
+        
+        <article>
+            <div class="content">
+                <%= yield %>
             </div>
-            <div id="titre">
-                <h1>
-                    <%= @item[:title] %>
-                </h1>
-                <% unless @item[:subtitle].nil? %> 
-                <h2>
-                    <%= @item[:subtitle] %> 
-                </h2>
-                <% end %>
-            </div>
+            <footer>
+                <ul class="article_metadata">
+                    <li><%=tradOf(:created_at)%>: <time><%= @item[:created_at].strftime(@config[:dateFormat][language.intern]) %></time></li>
+                    <li><%=tradOf(:last_modified)%>: <time> <%= gitmtime.strftime(@config[:dateFormat][language.intern]) %></time></li>
+                    <li><%=tradOf(:copyright) %></li>
+                </ul>
+            </footer>
+        </article>
 
-            <div class="flush"></div>
-
-            <% if @item[:content_for_summary] %>
-            <div class="corps summary">
-                <% @item[:content_for_summary] %>
+      </div>
+      <div id="related_articles">
+        <div id="previous_articles">
+            <h4> <%= tradOf(:previousArticles) %> </h4>
+            <% 
+               (1..3).each do |n|
+               a=article_brother(-n)
+               if not a.nil?
+           %>
+            <div class="previous_article">
+              <%= link_to( %{<span class="nicer">«</span>&nbsp;}+ a[:title], a)  %>
             </div>
             <% end %>
-
-            <%= generateSubMenu %>
-
-            <div class="flush"></div>
-            <div id="afterheader">
-                <div class="corps">
-                    <%= yield %>
-                </div>
-            <% depth = depthOf(@item) %>
-                <% if depth > 3 or ( depth == 3 and @item.children.length > 0 ) %>
-                    <div class="navigation">
-                        <div class="navigationprev"><%= previousFor(@item) %></div>
-                        <div class="navigationnext"><%= nextFor(@item) %></div>
-                    </div>
-                    <div class="flush"></div>
-                <% end %>
-
-                <div id="choixrss">
-                    <a id="rss" href="http://feeds.feedburner.com/yannespositocom<%= language %>">
-                        <%= tradOf(:subscribe) %>
-                    </a>
-                </div>
-                <script type="text/javascript">
-                    $(document).ready(function(){ 
-                            $('#comment').hide(); 
-                            $('#clickcomment').click(showComments); 
-                        });
-                    function showComments() {
-                        $('#comment').show();
-                        $('#clickcomment').fadeOut();
-                    }
-                    document.write('<div id="clickcomment"><%= tradOf(:clickForComment) %></div>');
-                </script>
-                <div class="flush"></div>
-                <div class="corps" id="comment">
-                    <h2 class="first"><%= tradOf(:comment) %></h2>
-                    <noscript>
-                        <%= tradOf(:enableJavascriptToComment) %>
-                    </noscript>
-                    <%= generateIntenseDebateThread %>
-                </div>
-
-            <div id="entete" class="corps_spaced">
-                <div id="liens">
-                    <%= generateMenu %>
-                </div>
-                <div class="flush"></div>
-                <hr/>
-                <div id="next_before_articles">
-                    <div id="previous_articles">
-                        <%= tradOf(:previousArticles) %>
-                        <% 
-                        (1..3).each do |n|
-                        a=article_brother(-n)
-                        if not a.nil?
-                        %>
-                        <div class="previous_article">
-                            <%= link_to( %{<span class="nicer">«</span>&nbsp;}+ a[:title], a)  %>
-                        </div>
-                        <% end %>
-                        <% end %>
-                    </div>
-                    <div id="next_articles">
-                        <%= tradOf(:nextArticles) %>
-                        <% 
-                        (1..3).each do |n|
-                        a=article_brother(n)
-                        if not a.nil?
-                        %>
-                        <div class="next_article">
-                            <%= link_to(a[:title] + %{&nbsp;<span class="nicer">»</span>}, a)  %>
-                        </div>
-                        <% end %>
-                        <% end %>
-                    </div>
-                    <div class="flush"></div>
-                </div>
-            </div>
-
-
-            <div id="bottom">
-                <div>
-                    <%=tradOf(:copyright) %>
-                </div>
-                <div id="lastmod">
-                    <%=tradOf(:created_at)%>: <%= @item[:created_at].strftime(@config[:dateFormat][language.intern]) %>
-                    <%=tradOf(:last_modified)%>: <%= gitmtime.strftime(@config[:dateFormat][language.intern]) %> 
-                </div>
-                <div>
-                    <%= tradOf(:entirely_done_with) %>
-                    <a href="http://www.vim.org">Vim</a>
-                    <%= tradOf(:and) %> 
-                    <a href="http://nanoc.stoneship.org">nanoc</a>
-                </div>
-                <div>
-                    <a href="<%=@config[:webprefix]%>/<%=language%>/validation/">Validation</a> 
-                    <a href="http://validator.w3.org/check?uri=referer"> [xhtml] </a>
-                    .
-                    <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3"> [css] </a>
-                    .
-                    <a href="http://validator.w3.org/feed/check.cgi?url=http%3A//yannesposito.com<%=@config[:webprefix]%>/<%=language%>/blog/feed/feed.xml">[rss]</a>
-                </div>
-            </div>
-            <div class="clear"></div>
+          <% end %>
         </div>
-        <%= clicky_analytics %>
-    </body>
+        <div id="next_articles">
+            <h4><%= tradOf(:nextArticles) %></h4>
+        <% 
+           (1..3).each do |n|
+              a=article_brother(n)
+              if not a.nil?
+        %>
+                <div class="next_article">
+                    <%= link_to(a[:title] + %{&nbsp;<span class="nicer">»</span>}, a)  %>
+                </div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="flush"></div>
+      </div>
+
+    </div> <!--! end of #container -->
+  </div> <!--! end of #metacontainer -->
+  <footer>
+    <div id="webpageinfo">
+        <%=tradOf(:copyright) %>
+        <div>
+            <%= tradOf(:entirely_done_with) %>
+            <a href="http://www.vim.org">Vim</a>
+            <%= tradOf(:and) %> 
+            <a href="http://nanoc.stoneship.org">nanoc</a>
+        </div>
+    </div>
+  </footer>
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='/js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script src="/js/plugins.js"></script>
+  <script src="/js/script.js"></script>
+  <%= @item[:content_for_js] %>
+  <!-- end scripts-->
+
+
+  <!--[if lt IE 7 ]>
+    <script src="/js/libs/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+  <![endif]-->
+
+
+  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+  <script>
+    var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>
+
+  <%= clicky_analytics %>
+</body>
 </html>

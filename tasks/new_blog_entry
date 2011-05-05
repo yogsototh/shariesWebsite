@@ -22,7 +22,7 @@ yearmonthday=$( date "+%Y-%m-%d" )
 linkname="$root/latest.md"
 filename="$root/multi/blog/${yearmonthday}-$basefilename.md"
 [[ ! -d ${filename:h} ]] && mkdir -p ${filename:h}
-dirname="$root/output/Scratch/img/blog/${yearmonthday}-${basefilename}"
+dirname="$root/site/img/blog/${yearmonthday}-${basefilename}"
 
 [[ -e $filename ]] && {
     print -P -- "%BAttention%b : $filename existe déjà."
