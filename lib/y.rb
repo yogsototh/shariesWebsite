@@ -153,16 +153,16 @@ module Nanoc3::Filters
 end
 
 def block(title, url, text, position="left")
-    return %{<div class="block #{position}">
-        <div>
-        <h3>
-            <a href="#{url}"> #{title} 
-                <span class="nicer">»</span> 
-            </a>
-        </h3>
-        <p>
-        #{text}
-        </p>
-        <div>
+    %{<div class="block #{position}">
+        <div class="inner">
+            <h3>
+                <a href="#{url}"> #{title} 
+                    <span class="nicer">»</span> 
+                </a>
+            </h3>
+            <p>
+                #{text}
+            </p>
+        </div>
     </div>}
 end

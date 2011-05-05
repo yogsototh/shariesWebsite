@@ -28,6 +28,7 @@ $('document').ready(function() {
 });
 </script>
 <% end %>
+
 <div id="mainlinks">
 <%= block("Secure","javascript:return false;","SHA1 ensure strong password generation","left secure") %>
 <%= block("Easy","javascript:return false;","Remember only one master password", "left easy") %>
@@ -36,19 +37,21 @@ $('document').ready(function() {
 
 <div class="flush"></div>
 
-<div id="securecontent" class="slideshow big"><div>
+<div id="securecontent" class="slideshow big"><div class="inner">
 YPassword use SHA1
 </div></div>
 
-<div id="easycontent" class="slideshow big"><div>
+<div id="easycontent" class="slideshow big"><div class="inner">
 You remember only one password the rest follow.
 </div></div>
 
-<div id="portablecontent" class="slideshow big"><div>
-You can use YPassword on 
-<ul>
-<li> iPhone, </li>
-<li> Mac using Dashboard widget, </li>
-<li> on UNIX system using the command line <code>openssl</code> </li>
-</ul>
-</div></div>
+<div id="portablecontent" class="slideshow big">
+    <div class="inner">
+        You can use YPassword on 
+        <ul>
+            <li> iPhone, </li>
+            <li> Mac using Dashboard widget, </li>
+            <li> on UNIX system using the command line <code>openssl</code> </li>
+        </ul>
+    </div>
+</div>
