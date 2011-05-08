@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://yannesposito.com/</id>
+  <title>Yogsototh's last blogs entries</title>
+  <updated>2011-05-05T09:27:11Z</updated>
+  <link rel="alternate" href="http://yannesposito.com/"/>
+  <link rel="self" href="http://feeds.feedburner.com/yannespositocomen"/>
+  <author>
+    <name>Yann Esposito</name>
+    <uri>http://yannesposito.com</uri>
+  </author>
+  <entry>
+    <id>tag:yannesposito.com,2011-05-05:/Scratch/en/blog/2011-05-05-Screenshots/</id>
+    <title type="html">Captures d'&#233;cran</title>
+    <published>2011-05-05T09:27:11Z</published>
+    <updated>2011-05-05T09:27:11Z</updated>
+    <author>
+      <name>Yann Esposito</name>
+      <uri>yannesposito.com</uri>
+    </author>
+    <link rel="alternate" href="http://yannesposito.com/Scratch/en/blog/2011-05-05-Screenshots/"/>
+    <content type="html">&lt;p&gt;&lt;img alt="&#238;cone" src="/Scratch/img/blog/2011-05-05-Screenshots/main.png" /&gt;&lt;/p&gt;
+
+
+&lt;div class="intro"&gt;
+
+
+&lt;p&gt;&lt;span class="sc"&gt;&lt;abbr title="Too long; don't read"&gt;tl;dr&lt;/abbr&gt;: &lt;/span&gt; Some&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Here are some screenshots of YPassword.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="premi&#232;re image" src="/Scratch/img/blog/2011-05-05-Screenshots/screenshot1.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="seconde image" src="/Scratch/img/blog/2011-05-05-Screenshots/screenshot2.png" /&gt;&lt;/p&gt;
+&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;</content>
+  </entry>
+</feed>

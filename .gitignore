@@ -2,4 +2,6 @@
 .DS_Store
 tmp/
 .sass-cache
-site/Scratch/
+site/build/
+site/src/
+site/test/
