@@ -21,16 +21,17 @@ class MyMain < Rack::TryStatic
                         :from => request[:mail],
                         :subject => 'YPassword support',
                         :body => request[:body],
+                        :port => '587',
+                        :via => 'smtp',
                         :via_options => {
-                            :address => 'smtp.gmail.com',
-                            :port => '587',
-                            :enable_starttls_auto => true,
-                            :user_name => 'yann.esposito.help@gmail.com',
-                            :password => '9wHbwyFeniThZUU2Dv14gdNqhVw',
-                            :authentification => :plain,
-                            :domain => "HELO",
-                        }
-                     )
+                            :address                => 'smtp.gmail.com',
+                            :port                   => '587',
+                            :enable_starttls_auto   => true,
+                            :user_name              => 'yann.esposito.help@gmail.com',
+                            :password               => '9wHbwyFeniThZUU2Dv14gdNqhVw',
+                            :authentification       => :plain,
+                            :domain                 => "localhost.localdomain",
+                        })
             return [200, {
                 "Last-Modified"  => File.mtime($mailFile).httpdate,
                 "Content-Type"   => "text/html",
