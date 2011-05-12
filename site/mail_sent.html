@@ -14,7 +14,10 @@
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Support</title>
+  <title>YPassword - Message sent</title>
+
+  <meta http-equiv="REFRESH" content="4;url=/">
+
   <meta name="description" content="">
   <meta name="author" content="">
   
@@ -47,10 +50,10 @@
 <body lang="en">
   <header>
     <div id="choixrss"><a id="rss" href="http://feeds.feedburner.com/yannespositocomen">Subscribe</a></div>
-    <div id="choixlang"><a href="/Scratch/fr/support/" onclick="setLanguage('fr')">en Français</a></div>
+    <div id="choixlang"><a href="/Scratch/fr/" onclick="setLanguage('fr')">en Français</a></div>
     <nav id="mainnav">
         <ul>
-            <ul><li><a href="/Scratch/en/">YPassword</a></li><li><a href="/Scratch/en/blog/">Blog</a></li><li><span class="active" title="You're here.">Support</span></li></ul>
+            <ul><li><a href="/">YPassword</a></li><li><a href="/Scratch/en/blog/">Blog</a></li><li><a href="/Scratch/en/about/">About</a></li></ul>
         </ul>
     </nav>
   </header>
@@ -59,46 +62,19 @@
 
       <div id="main" role="main">
         <hgroup>
-          <h1>
-<span style="font-weight: normal; margin-top: 0; line-height: 1ex">
-    <span style="letter-spacing:-.10em">YPassword</span>
-</span>
-</h1>
-           
-          <h2>
-          
-    <span style="letter-spacing: 1em">Support</span>
-
-          </h2>
+          <h1>Message sent.</h1>
           
         </hgroup>
         
         <article>
             <div class="content">
-                
-<p>A problem? A remark? </p>
-
-<form name="email" id="email" action="/contact" method="post">
-<input type="text" name="name" value="Your name" onfocus="this.value=<code>" style="display: block;width=20em" />
-<input type="text" name="mail" value="Your email" onfocus="this.value=</code>" style="display: block; width=20em" />
-<textarea name="body" id="bodytextarea" value="" onfocus="this.value=''" style="display: block; height: 10em; width: 30em;">Enter your comment here</textarea>
-<input type="submit" value="Send" />
-</form>
-
-<p><br /></p>
-
-<p>By mail:</p>
-
-<p class="big"><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#121;&#097;&#110;&#110;&#046;&#101;&#115;&#112;&#111;&#115;&#105;&#116;&#111;&#046;&#104;&#101;&#108;&#112;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">&#121;&#097;&#110;&#110;&#046;&#101;&#115;&#112;&#111;&#115;&#105;&#116;&#111;&#046;&#104;&#101;&#108;&#112;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a></p>
-
-<p>Via twitter: </p>
-
-<p class="big"><a href="http://twitter.com/yogsototh">@yogsototh</a></p>
-
+                <p>Thanks for your message.</p>
+                <p>I will personally reply as soon as possible.</p>
+                <p>You should be automatically redirected in few seconds.</p>
             </div>
             <footer>
                 <ul class="article_metadata">
-                    <li>Modified: <time> 05/08/2011</time></li>
+                    <li>Modified: <time> 05/05/2011</time></li>
                     <li><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Copyright ©, Yann Esposito</a></li>
                 </ul>
             </footer>
@@ -131,6 +107,30 @@
   <script src="/js/plugins.js"></script>
   <script src="/js/script.js"></script>
   
+<script>
+var blocks=["secure","easy","portable"];
+function show(name) {
+    for ( var i in blocks ) {
+        el=blocks[i];
+        if (el == name) { continue; }
+        // console.log('HIDE: #'+el+'content');
+        $('#'+el+'content').hide();
+    }
+    $('#'+name+'content').show();
+    // console.log('SHOW: #'+name+'content');
+}
+
+$('document').ready(function() {
+    $('.secure').click(function() {show("secure")});
+    $('.easy').click(function() {show("easy")});
+    $('.portable').click(function() {show("portable")});
+    for (var i in blocks) {
+        el=blocks[i];
+        $('#'+el+'content').hide();
+    }
+});
+</script>
+
   <!-- end scripts-->
 
 
