@@ -17,21 +17,22 @@ class MyMain < Rack::TryStatic
     def call(env) 
         request = Rack::Request.new(env)
         if request.path == "/contact" and request.post?
-            Pony.mail( :to => "yann.esposito@gmail.com",
-                        :from => request[:mail],
-                        :subject => 'YPassword support',
-                        :body => request[:body],
-                        :port => '587',
-                        :via => 'smtp',
-                        :via_options => {
-                            :address                => 'smtp.sendgrid.net',
-                            :port                   => '587',
-                            :enable_starttls_auto   => true,
-                            :user_name              => ENV['SENDGRID_USERNAME'],
-                            :password               => ENV['SENDGRID_PASSWORD'],
-                            :authentification       => :plain,
-                            :domain                 => ENV['SENDGRID_DOMAIN'],
-                        })
+            Pony.mail(  
+              :from => request[:name] + '<' + request[:mail] +'>',
+              :to => "yann.esposito@gmail.com",
+              :subject => 'YPassword support',
+              :body => request[:body],
+              :port => '587',
+              :via => :smtp,
+              :via_options => {
+                  :address                => 'smtp.sendgrid.net',
+                  :port                   => '587',
+                  :enable_starttls_auto   => true,
+                  :user_name              => ENV['SENDGRID_USERNAME'],
+                  :password               => ENV['SENDGRID_PASSWORD'],
+                  :authentification       => :plain,
+                  :domain                 => ENV['SENDGRID_DOMAIN'],
+              })
             return [200, {
                 "Last-Modified"  => File.mtime($mailFile).httpdate,
                 "Content-Type"   => "text/html",
