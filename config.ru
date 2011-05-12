@@ -20,7 +20,17 @@ class MyMain < Rack::TryStatic
             Pony.mail( :to => "yann.esposito@gmail.com",
                         :from => request[:mail],
                         :subject => 'YPassword support',
-                        :body => request[:body])
+                        :body => request[:body],
+                        :via_options => {
+                            :address => 'smtp.gmail.com',
+                            :port => '587',
+                            :enable_starttls_auto => true,
+                            :user_name => 'yann.esposito.help@gmail.com',
+                            :password => '9wHbwyFeniThZUU2Dv14gdNqhVw',
+                            :authentification => :plain,
+                            :domain => "HELO",
+                        }
+                     )
             return [200, {
                 "Last-Modified"  => File.mtime($mailFile).httpdate,
                 "Content-Type"   => "text/html",
