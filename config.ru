@@ -24,13 +24,13 @@ class MyMain < Rack::TryStatic
                         :port => '587',
                         :via => 'smtp',
                         :via_options => {
-                            :address                => 'smtp.gmail.com',
+                            :address                => 'smtp.sendgrid.net',
                             :port                   => '587',
                             :enable_starttls_auto   => true,
-                            :user_name              => 'yann.esposito.help@gmail.com',
-                            :password               => '9wHbwyFeniThZUU2Dv14gdNqhVw',
+                            :user_name              => ENV['SENDGRID_USERNAME'],
+                            :password               => ENV['SENDGRID_PASSWORD'],
                             :authentification       => :plain,
-                            :domain                 => "localhost.localdomain",
+                            :domain                 => ENV['SENDGRID_DOMAIN'],
                         })
             return [200, {
                 "Last-Modified"  => File.mtime($mailFile).httpdate,
