@@ -1,5 +1,4 @@
 rack
 rack-contrib
 rack-rewrite
-sinatra
 pony
