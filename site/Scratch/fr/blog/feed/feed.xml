@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://yannesposito.com/</id>
+  <id>http://ypassword.espozito.com/</id>
   <title>Yogsototh's last blogs entries</title>
   <updated>2011-05-05T09:27:11Z</updated>
-  <link rel="alternate" href="http://yannesposito.com/"/>
+  <link rel="alternate" href="http://ypassword.espozito.com/"/>
   <link rel="self" href="http://feeds.feedburner.com/yannespositocomfr"/>
   <author>
     <name>Yann Esposito</name>
     <uri>http://yannesposito.com</uri>
   </author>
   <entry>
-    <id>tag:yannesposito.com,2011-05-05:/Scratch/fr/blog/2011-05-05-Screenshots/</id>
+    <id>tag:ypassword.espozito.com,2011-05-05:/Scratch/fr/blog/2011-05-05-Screenshots/</id>
     <title type="html">Screenshots</title>
     <published>2011-05-05T09:27:11Z</published>
     <updated>2011-05-05T09:27:11Z</updated>
@@ -18,7 +18,7 @@
       <name>Yann Esposito</name>
       <uri>yannesposito.com</uri>
     </author>
-    <link rel="alternate" href="http://yannesposito.com/Scratch/fr/blog/2011-05-05-Screenshots/"/>
+    <link rel="alternate" href="http://ypassword.espozito.com/Scratch/fr/blog/2011-05-05-Screenshots/"/>
     <content type="html">&lt;p&gt;&lt;img alt="&#238;cone" src="/Scratch/img/blog/2011-05-05-Screenshots/main.png" /&gt;&lt;/p&gt;
 
 
