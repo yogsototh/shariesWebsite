@@ -10,7 +10,7 @@ use Rack::Deflater
 use Rack::ETag
 
 use Rack::Rewrite do
-    r302 %r{/support}, 'http://ypassword.espozito.com/Scratch/en/support'
+    r302 %r{^/support}, '/Scratch/en/support/index.html'
 end
 
 $rootdir="site"
