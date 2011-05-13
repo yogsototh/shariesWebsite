@@ -30,7 +30,7 @@ $('document').ready(function() {
 <% end %>
 
 <% content_for :title do %>
-    <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=436268354&mt=8">YPassword<span class="nicer">&raquo;</span></a>
+    <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=436268354&mt=8"><img src="/img/Icon-512.png" style="height: 128px; margin: 24px;vertical-align: middle;"/>YPassword<span class="nicer">&raquo;</span></a>
 <% end %>
 
 <div id="mainlinks">
