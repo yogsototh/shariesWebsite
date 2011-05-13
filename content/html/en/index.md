@@ -43,12 +43,12 @@ $('document').ready(function() {
 
 <div id="securecontent" class="slideshow big"><div class="inner">
 YPassword use SHA1
-<img src="/img/main_password.jpg" alt="main password view"/>
+<img src="/Scratch//img/blog/2011-05-05-Screenshots/main_password.jpg" alt="main password view" style="display:block;"/>
 </div></div>
 
 <div id="easycontent" class="slideshow big"><div class="inner">
 You remember only one password the rest follow.
-<img src="/img/main_view.jpg" alt="main view"/>
+<img src="/Scratch//img/blog/2011-05-05-Screenshots/main_view.jpg" alt="main view" style="display:block;"/>
 If you click on "go to website" you are redirected to the website.
 Your password is copied, you can paste it.
 </div></div>
