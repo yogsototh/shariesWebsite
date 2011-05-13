@@ -1,12 +1,17 @@
 require 'rubygems'
 require 'rack'
 require 'rack/contrib'
+require 'rack-rewrite'
 require 'rack/trystatic'
 require 'mime/types'
 require 'pony'
 
 use Rack::Deflater
 use Rack::ETag
+
+use Rack::Rewrite do
+    r302 %r{/support}, 'http://ypassword.espozito.com/Scratch/en/support'
+end
 
 $rootdir="site"
 
