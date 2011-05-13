@@ -11,19 +11,46 @@ tags:
   - images
 en:   - screenshot
 -----
-<%= blogimage("main.png","îcone") %>
 
 begindiv(intro)
 
-en: <%= tldr %> Some
+en: <%= tldr %> Some screenshots
 
-fr: <%= tlal %>
+fr: <%= tlal %> Des captures d'écrans.
 
 enddiv
 
 fr: Ceci est une suite de quelques captures d'écran d'YPassword.
 en: Here are some screenshots of YPassword.
 
-<%= blogimage("screenshot1.png","première image") %>
+<%= blogimage("entry_screen.jpg","Entry screen") %>
+{: .left}
 
-<%= blogimage("screenshot2.png","seconde image") %>
+<div class="flush"></div>
+
+<%= leftblogimage("main_view.jpg","main view") %>
+
+en: If you tap, the light glow and this means your password is copied.
+en: Now you can paste it anywhere.
+en: {: .big}
+en: 
+en: If you tab "Go to website", you are sent to the website and your password is copied for you.
+en: {: .big}
+
+fr: Lorsque vous tapez le mot de passe ou votre nom de login la lumière pulse. Votre mot de passe est copié, prêt à être collé n'importe où.
+fr: {: .big}
+fr: 
+fr: Si vous appuyez sur le bouton "go to website" vous allez sur le site web. fr: Le mot de passe est copié pour vous.
+fr: {: .big}
+
+<div class="flush"></div>
+
+<%= blogimage("list_view.jpg","list view") %>
+{: .left}
+
+<%= blogimage("main_password.jpg","main password") %>
+{: .left}
+
+<%= blogimage("add_website.jpg","add website view") %>
+{: .left}
+<div class="flush"></div>

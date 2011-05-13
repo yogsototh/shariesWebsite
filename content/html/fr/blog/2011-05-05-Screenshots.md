@@ -9,17 +9,38 @@ author_uri: yannesposito.com
 tags:
   - images
 -----
-<%= blogimage("main.png","îcone") %>
 
 begindiv(intro)
 
 
-<%= tlal %>
+<%= tlal %> Des captures d'écrans.
 
 enddiv
 
 Ceci est une suite de quelques captures d'écran d'YPassword.
 
-<%= blogimage("screenshot1.png","première image") %>
+<%= blogimage("entry_screen.jpg","Entry screen") %>
+{: .left}
 
-<%= blogimage("screenshot2.png","seconde image") %>
+<div class="flush"></div>
+
+<%= leftblogimage("main_view.jpg","main view") %>
+
+
+Lorsque vous tapez le mot de passe ou votre nom de login la lumière pulse. Votre mot de passe est copié, prêt à être collé n'importe où.
+{: .big}
+
+Si vous appuyez sur le bouton "go to website" vous allez sur le site web. fr: Le mot de passe est copié pour vous.
+{: .big}
+
+<div class="flush"></div>
+
+<%= blogimage("list_view.jpg","list view") %>
+{: .left}
+
+<%= blogimage("main_password.jpg","main password") %>
+{: .left}
+
+<%= blogimage("add_website.jpg","add website view") %>
+{: .left}
+<div class="flush"></div>

@@ -29,6 +29,10 @@ $('document').ready(function() {
 </script>
 <% end %>
 
+<% content_for :title do %>
+    <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=436268354&mt=8">YPassword<span class="nicer">&raquo;</span></a>
+<% end %>
+
 <div id="mainlinks">
 <%= block("Secure","javascript:return false;","SHA1 ensure strong password generation","left secure") %>
 <%= block("Easy","javascript:return false;","Remember only one master password", "left easy") %>
@@ -39,10 +43,14 @@ $('document').ready(function() {
 
 <div id="securecontent" class="slideshow big"><div class="inner">
 YPassword use SHA1
+<img src="/img/main_password.jpg" alt="main password view"/>
 </div></div>
 
 <div id="easycontent" class="slideshow big"><div class="inner">
 You remember only one password the rest follow.
+<img src="/img/main_view.jpg" alt="main view"/>
+If you click on "go to website" you are redirected to the website.
+Your password is copied, you can paste it.
 </div></div>
 
 <div id="portablecontent" class="slideshow big">
@@ -55,3 +63,8 @@ You remember only one password the rest follow.
         </ul>
     </div>
 </div>
+
+<div class="flush"></div>
+<%= block("Get it!", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=436268354&mt=8","On the Apple Store") %>
+
+<div class="flush"></div>
