@@ -3,7 +3,7 @@ isHidden:       false
 menupriority:   1
 kind:           article
 created_at:     2011-05-05T11:27:11+02:00
-title: Captures d'écran
+title: Screenshots
 author_name: Yann Esposito
 author_uri: yannesposito.com
 tags:
@@ -20,10 +20,11 @@ enddiv
 
 Here are some screenshots of YPassword.
 
-<%= blogimage("entry_screen.jpg","Entry screen") %>
-{: .left}
+<%= leftblogimage("entry_screen.jpg","Entry screen") %>
 
 <div class="flush"></div>
+
+<hr/>
 
 <%= leftblogimage("main_view.jpg","main view") %>
 
@@ -37,12 +38,14 @@ If you tab "Go to website", you are sent to the website and your password is cop
 
 <div class="flush"></div>
 
-<%= blogimage("list_view.jpg","list view") %>
-{: .left}
+<%= leftblogimage("list_view.jpg","list view") %>
 
-<%= blogimage("main_password.jpg","main password") %>
-{: .left}
+<hr/>
 
-<%= blogimage("add_website.jpg","add website view") %>
-{: .left}
+<%= leftblogimage("main_password.jpg","main password") %>
+
+<hr/>
+
+<%= leftblogimage("add_website.jpg","add website view") %>
+
 <div class="flush"></div>

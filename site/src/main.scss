@@ -89,6 +89,13 @@ article {
         @include innerblock();
         padding: 15px;
         @include column(4);
+        margin: 24px;
+    }
+    img.left {
+        margin: 0 24px 24px 0;
+    }
+    img.right {
+        margin: 0 0 24px 24px;
     }
 }
 
@@ -175,9 +182,6 @@ nav {
 
 header #choixrss, header #choixlang {
     display: block;
-    margin-right: 0px;
-    margin-left: 0px;
-    height: 100%; 
     @include text-shadow( -1px -1px rgba(0,0,0,0.2), 1px 1px rgba(0,0,0,0.2));
     float: right;
     height: $navHeight;
@@ -188,8 +192,6 @@ header #choixrss, header #choixlang {
         color: $lightGrey;
         display: block;
         height: 100%;
-        width: $menuItemWidth;
-        padding: 0 10px 0 10px;
         text-align: center;
     }
     a:hover {
@@ -202,6 +204,7 @@ nav ul li, #choixlang, #choixrss {
     a:hover {
         @include box-shadow(#337 0 0 8px inset);
     }
+    @include column(2,true);
 }
 
 #main, #container {

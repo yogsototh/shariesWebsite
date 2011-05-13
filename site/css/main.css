@@ -50,6 +50,7 @@ article img {
   padding: 15px;
   width: 344px;
   margin-right: 24px;
+  margin: 24px;
 }
 /* line 40, ../src/main.scss */
 article img > * {
@@ -59,19 +60,27 @@ article img > * {
 article img:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
+/* line 94, ../src/main.scss */
+article img.left {
+  margin: 0 24px 24px 0;
+}
+/* line 97, ../src/main.scss */
+article img.right {
+  margin: 0 0 24px 24px;
+}
 
-/* line 95, ../src/main.scss */
+/* line 102, ../src/main.scss */
 .corps {
   margin: 48px 0;
   line-height: 32px;
 }
 
-/* line 100, ../src/main.scss */
+/* line 107, ../src/main.scss */
 #metacontainer {
   border-bottom: 1px solid #888;
 }
 
-/* line 103, ../src/main.scss */
+/* line 110, ../src/main.scss */
 body > header {
   margin: 0;
   color: #CCC;
@@ -84,7 +93,7 @@ body > header {
   box-shadow: 0px 0px 5px #333333;
 }
 
-/* line 111, ../src/main.scss */
+/* line 118, ../src/main.scss */
 body > footer {
   border-top: solid 1px rgba(0, 0, 0, 0.1);
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
@@ -99,12 +108,12 @@ body > footer {
   -o-box-shadow: rgba(0, 0, 0, 0.2) 0 0 7px inset;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 7px inset;
 }
-/* line 121, ../src/main.scss */
+/* line 128, ../src/main.scss */
 body > footer a {
   color: #2c5490;
 }
 
-/* line 126, ../src/main.scss */
+/* line 133, ../src/main.scss */
 article > footer {
   margin: 48px 0;
   width: 252px;
@@ -122,7 +131,7 @@ article > footer {
   border-radius: 5px;
   font-size: .7em;
 }
-/* line 128, ../src/main.scss */
+/* line 135, ../src/main.scss */
 article > footer ul {
   list-style-type: none;
 }
@@ -134,20 +143,20 @@ article > footer > * {
 article > footer:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-/* line 134, ../src/main.scss */
+/* line 141, ../src/main.scss */
 article > footer ul {
   list-style-type: none;
 }
 
-/* line 141, ../src/main.scss */
+/* line 148, ../src/main.scss */
 nav {
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 }
-/* line 144, ../src/main.scss */
+/* line 151, ../src/main.scss */
 nav ul {
   list-style-type: none;
 }
-/* line 146, ../src/main.scss */
+/* line 153, ../src/main.scss */
 nav ul li {
   display: inline-block;
   height: 50px;
@@ -157,7 +166,7 @@ nav ul li {
   border-left: solid 1px rgba(255, 255, 255, 0.1);
   border-right: solid 1px rgba(0, 0, 0, 0.2);
 }
-/* line 154, ../src/main.scss */
+/* line 161, ../src/main.scss */
 nav ul li * {
   display: block;
   margin-right: 0px;
@@ -166,26 +175,23 @@ nav ul li * {
   height: 100%;
   text-shadow: -1px -1px rgba(0, 0, 0, 0.2), 1px 1px rgba(0, 0, 0, 0.2);
 }
-/* line 162, ../src/main.scss */
+/* line 169, ../src/main.scss */
 nav ul li span.active {
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 165, ../src/main.scss */
+/* line 172, ../src/main.scss */
 nav ul li a {
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 167, ../src/main.scss */
+/* line 174, ../src/main.scss */
 nav ul li a:hover {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* line 176, ../src/main.scss */
+/* line 183, ../src/main.scss */
 header #choixrss, header #choixlang {
   display: block;
-  margin-right: 0px;
-  margin-left: 0px;
-  height: 100%;
   text-shadow: -1px -1px rgba(0, 0, 0, 0.2), 1px 1px rgba(0, 0, 0, 0.2);
   float: right;
   height: 50px;
@@ -193,22 +199,24 @@ header #choixrss, header #choixlang {
   border-left: solid 1px rgba(255, 255, 255, 0.1);
   border-right: solid 1px rgba(0, 0, 0, 0.2);
 }
-/* line 187, ../src/main.scss */
+/* line 191, ../src/main.scss */
 header #choixrss a, header #choixlang a {
   color: #bcd0ee;
   display: block;
   height: 100%;
-  width: 8em;
-  padding: 0 10px 0 10px;
   text-align: center;
 }
-/* line 195, ../src/main.scss */
+/* line 197, ../src/main.scss */
 header #choixrss a:hover, header #choixlang a:hover {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* line 202, ../src/main.scss */
+/* line 203, ../src/main.scss */
+nav ul li, #choixlang, #choixrss {
+  width: 160px;
+}
+/* line 204, ../src/main.scss */
 nav ul li a:hover, #choixlang a:hover, #choixrss a:hover {
   -moz-box-shadow: #333377 0 0 8px inset;
   -webkit-box-shadow: #333377 0 0 8px inset;
@@ -216,12 +224,12 @@ nav ul li a:hover, #choixlang a:hover, #choixrss a:hover {
   box-shadow: #333377 0 0 8px inset;
 }
 
-/* line 207, ../src/main.scss */
+/* line 210, ../src/main.scss */
 #main, #container {
   margin: 0px auto;
 }
 
-/* line 211, ../src/main.scss */
+/* line 214, ../src/main.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Expletus Sans',Futura,sans-serif;
   text-shadow: 0px -1px 0px #223366, 0px 1px 0px white;
@@ -230,12 +238,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 48px 0;
   text-align: center;
 }
-/* line 220, ../src/main.scss */
+/* line 223, ../src/main.scss */
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   text-shadow: 0px -1px 0px #441111, 0px 1px 0px white;
 }
 
-/* line 226, ../src/main.scss */
+/* line 229, ../src/main.scss */
 article article {
   background-color: rgba(0, 0, 0, 0.02);
   -moz-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
@@ -258,13 +266,13 @@ article article > * {
 article article:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-/* line 228, ../src/main.scss */
+/* line 231, ../src/main.scss */
 article article .date {
   float: right;
   padding: 0;
   margin: 20px;
 }
-/* line 230, ../src/main.scss */
+/* line 233, ../src/main.scss */
 article article h1, article article h2, article article h3, article article h4, article article h5, article article h6 {
   text-align: left;
   font-size: 36px;
@@ -272,17 +280,17 @@ article article h1, article article h2, article article h3, article article h4, 
   margin: 0 0 16px;
 }
 
-/* line 238, ../src/main.scss */
+/* line 241, ../src/main.scss */
 .intro {
   margin-bottom: 24px;
 }
 
-/* line 242, ../src/main.scss */
+/* line 245, ../src/main.scss */
 .sc {
   font-variant: small-caps;
 }
 
-/* line 246, ../src/main.scss */
+/* line 249, ../src/main.scss */
 .block {
   background-color: rgba(0, 0, 0, 0.02);
   -moz-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
@@ -310,29 +318,29 @@ article article h1, article article h2, article article h3, article article h4, 
 .block:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-/* line 250, ../src/main.scss */
+/* line 253, ../src/main.scss */
 .block h3 {
   text-size: .6em;
   text-align: left;
   margin: 0 0 12px;
 }
 
-/* line 259, ../src/main.scss */
+/* line 262, ../src/main.scss */
 .right {
   float: right;
 }
 
-/* line 262, ../src/main.scss */
+/* line 265, ../src/main.scss */
 .left {
   float: left;
 }
 
-/* line 265, ../src/main.scss */
+/* line 268, ../src/main.scss */
 .flush {
   clear: both;
 }
 
-/* line 268, ../src/main.scss */
+/* line 271, ../src/main.scss */
 .slideshow {
   background: #88aadd;
   color: #fafafa;
@@ -354,12 +362,12 @@ article article h1, article article h2, article article h3, article article h4, 
 .slideshow > * {
   margin: 20px;
 }
-/* line 270, ../src/main.scss */
+/* line 273, ../src/main.scss */
 .slideshow > * {
   padding: 3em;
 }
 
-/* line 275, ../src/main.scss */
+/* line 278, ../src/main.scss */
 .date {
   font-size: 0.4em;
   border: 1px solid #7689a6;
@@ -370,18 +378,18 @@ article article h1, article article h2, article article h3, article article h4, 
   vertical-align: middle;
   margin-right: 1em;
 }
-/* line 284, ../src/main.scss */
+/* line 287, ../src/main.scss */
 .date .day, .date .month, .date .year {
   display: block;
 }
-/* line 287, ../src/main.scss */
+/* line 290, ../src/main.scss */
 .date .day {
   float: left;
   width: 1.7em;
   background: #a9c5ee;
   color: #2c5490;
 }
-/* line 293, ../src/main.scss */
+/* line 296, ../src/main.scss */
 .date .month {
   float: right;
   width: 2.3em;
@@ -389,7 +397,7 @@ article article h1, article article h2, article article h3, article article h4, 
   background: #2c5490;
   border-left: 1px solid #88aadd;
 }
-/* line 300, ../src/main.scss */
+/* line 303, ../src/main.scss */
 .date .year {
   line-height: 3ex;
   clear: both;
@@ -398,7 +406,7 @@ article article h1, article article h2, article article h3, article article h4, 
   border-top: 1px solid #223366;
 }
 
-/* line 310, ../src/main.scss */
+/* line 313, ../src/main.scss */
 .archive {
   background-color: rgba(0, 0, 0, 0.02);
   -moz-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
@@ -414,27 +422,27 @@ article article h1, article article h2, article article h3, article article h4, 
   padding: 2em;
 }
 
-/* line 316, ../src/main.scss */
+/* line 319, ../src/main.scss */
 .tag {
   cursor: pointer;
 }
 
-/* line 319, ../src/main.scss */
+/* line 322, ../src/main.scss */
 .nicer {
   font-family: "Lucida Grande", Tahoma;
 }
 
-/* line 324, ../src/main.scss */
+/* line 327, ../src/main.scss */
 #elementblock ul {
   list-style-type: none;
 }
-/* line 326, ../src/main.scss */
+/* line 329, ../src/main.scss */
 #elementblock ul li {
   display: inline-block;
   width: 252px;
   margin-right: 24px;
 }
-/* line 329, ../src/main.scss */
+/* line 332, ../src/main.scss */
 #elementblock ul li a {
   float: left;
   background-color: rgba(0, 0, 0, 0.02);
@@ -452,12 +460,12 @@ article article h1, article article h2, article article h3, article article h4, 
   text-align: center;
   width: 80%;
 }
-/* line 338, ../src/main.scss */
+/* line 341, ../src/main.scss */
 #elementblock ul li a:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* line 345, ../src/main.scss */
+/* line 348, ../src/main.scss */
 .return {
   background-color: rgba(0, 0, 0, 0.02);
   -moz-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
@@ -482,13 +490,13 @@ article article h1, article article h2, article article h3, article article h4, 
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* line 352, ../src/main.scss */
+/* line 355, ../src/main.scss */
 #related_articles #previous_articles {
   width: 344px;
   margin-right: 24px;
   float: left;
 }
-/* line 356, ../src/main.scss */
+/* line 359, ../src/main.scss */
 #related_articles #next_articles {
   float: right;
   text-align: right;

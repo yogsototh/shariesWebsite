@@ -11,7 +11,7 @@
   </author>
   <entry>
     <id>tag:ypassword.espozito.com,2011-05-05:/Scratch/en/blog/2011-05-05-Screenshots/</id>
-    <title type="html">Captures d'&#233;cran</title>
+    <title type="html">Screenshots</title>
     <published>2011-05-05T09:27:11Z</published>
     <updated>2011-05-05T09:27:11Z</updated>
     <author>
@@ -31,9 +31,11 @@
 
 &lt;p&gt;Here are some screenshots of YPassword.&lt;/p&gt;
 
-&lt;p class="left"&gt;&lt;img alt="Entry screen" src="/Scratch/img/blog/2011-05-05-Screenshots/entry_screen.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Entry screen" src="/Scratch/img/blog/2011-05-05-Screenshots/entry_screen.jpg" class="left" /&gt;&lt;/p&gt;
 
 &lt;div class="flush"&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;img alt="main view" src="/Scratch/img/blog/2011-05-05-Screenshots/main_view.jpg" class="left" /&gt;&lt;/p&gt;
 
@@ -44,6 +46,6 @@ Now you can paste it anywhere.&lt;/p&gt;
 
 &lt;div class="flush"&gt;&lt;/div&gt;
 
-&lt;p class="left"&gt;&lt;img alt="list view" src="/Scratch/img/blog/2011-05-05-Screenshots/list_view.jpg" /&gt;&lt;/img&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;</content>
+&lt;p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/hr&gt;&lt;/p&gt;</content>
   </entry>
 </feed>

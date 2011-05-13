@@ -3,7 +3,7 @@ isHidden:       false
 menupriority:   1
 kind:           article
 created_at:     2011-05-05T11:27:11+02:00
-title: Screenshots
+title: Captures d'écran
 author_name: Yann Esposito
 author_uri: yannesposito.com
 tags:
@@ -19,10 +19,11 @@ enddiv
 
 Ceci est une suite de quelques captures d'écran d'YPassword.
 
-<%= blogimage("entry_screen.jpg","Entry screen") %>
-{: .left}
+<%= leftblogimage("entry_screen.jpg","Entry screen") %>
 
 <div class="flush"></div>
+
+<hr/>
 
 <%= leftblogimage("main_view.jpg","main view") %>
 
@@ -35,12 +36,14 @@ Si vous appuyez sur le bouton "go to website" vous allez sur le site web. fr: Le
 
 <div class="flush"></div>
 
-<%= blogimage("list_view.jpg","list view") %>
-{: .left}
+<%= leftblogimage("list_view.jpg","list view") %>
 
-<%= blogimage("main_password.jpg","main password") %>
-{: .left}
+<hr/>
 
-<%= blogimage("add_website.jpg","add website view") %>
-{: .left}
+<%= leftblogimage("main_password.jpg","main password") %>
+
+<hr/>
+
+<%= leftblogimage("add_website.jpg","add website view") %>
+
 <div class="flush"></div>
