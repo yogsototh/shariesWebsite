@@ -40,3 +40,8 @@ cmd="nanoc co $priority_list"
 print -- '==='
 print -- $cmd
 eval $cmd
+
+src="site/Scratch/en/index.html"
+dst="site/index.html"
+print -- "copy index: $src => $dst"
+\cp -f $src $dst

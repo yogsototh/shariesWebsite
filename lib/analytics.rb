@@ -8,7 +8,7 @@ def genAnalytics
    </script>
    <script type="text/javascript">
    try {
-   var pageTracker = _gat._getTracker("UA-10612400-1");
+   var pageTracker = _gat._getTracker("UA-10612400-2");
    pageTracker._trackPageview();
    } catch(err) {}</script>}
 end
