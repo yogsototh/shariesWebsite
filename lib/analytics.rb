@@ -29,3 +29,13 @@ def clicky_analytics
 <noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/#{clickyid}ns.gif" /></p></noscript>
     }
 end
+
+def user_voice
+    return %{ <script type="text/javascript">
+            (function() {
+             var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+             uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/JgOrVPRCzoip6TmO9Rkbw.js';
+             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+             })();
+        </script>}
+end
