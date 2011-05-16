@@ -5,6 +5,39 @@ $default-transition-duration: .2s
 
 @import "compass/css3/border-radius"
 @import "compass/css3/box-shadow"
+@import "compass/css3/text-shadow";
+
+$ycolorb: #EFEFF4
+$ycolorc: #E3E5ED
+$ycolor0: #C9CEDE
+$ycolor1: #B4B8C5 
+$ycolor2: #9CA1AD 
+$ycolor3: #868B96 
+$ycolor4: #60646C 
+$ycolor5: #51555C 
+$ycolor6: #41444A 
+$ycolor7: #303237 
+$ycolor8: #1F2024 
+$ycolor9: #0F1011
+
+$main-background-color: $ycolorb
+
+
+body
+  background: $main-background-color
+  &.bp 
+    h1,h2,h3,h4,h5,h6
+      color: ycolor0
+      text-shadow: 0 0 2px rgba(#000,0.9)
+    a
+      text-decoration: none
+      color: $ycolor0
+      &:visited
+        color: $ycolor0
+      &:hover, &:active
+        color: #D86
+        
+
 
 // Transition for all elements
 * 
