@@ -3,5 +3,4 @@
 tmp/
 .sass-cache
 site/build/
-site/src/
 site/test/
