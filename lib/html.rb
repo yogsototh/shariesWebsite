@@ -30,3 +30,25 @@ def choixlang
         end
     end.join()
 end
+
+def page_title
+    if @item[:content_for_title].nil?
+        h1text=@item[:title]
+    else
+        h1text=@item[:content_for_title]
+    end
+    tmp=%{<h1>#{h1text}</h1>}
+    unless @item[:subtitle].nil? and @item[:content_for_subtitle].nil?
+        if @item[:content_for_subtitle].nil?
+            h2text=@item[:subtitle] 
+        else 
+            h2text=@item[:content_for_subtitle]
+        end
+        tmp <<= %{<h2>#{h2text}</h2>}
+    end
+    return tmp
+end
+
+def last_modified_tag
+    return %{#{tradOf(:last_modified)}: <time>#{gitmtime.strftime(@config[:dateFormat][@conf.language.intern])}</time>}
+end

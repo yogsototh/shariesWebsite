@@ -1,0 +1,72 @@
+@import "blueprint/debug"
+
+$default-transition-duration: .2s
+@import "compass/css3/transition"
+
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+
+// Transition for all elements
+* 
+  +transition
+
+=debugblock
+  +box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset)
+  background: rgba(#EA6,0.08)
+
+// *
+//   +debugblock
+
+// large container
+#container
+  width: span(24)
+  margin: 0 auto
+  // +showgrid
+
+a
+  text-decoration: none
+
+h1
+  text-align: center
+
+=innerblock
+  background-color: rgba(#000,0.02)
+  +box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset)
+  +border-radius()
+  & > *
+    padding: 20px
+
+.block
+  +column(6)
+  +innerblock
+  &:hover
+    background-color: rgba(#000,0.05)
+
+#choixlang
+  +column(4)
+
+#choixrss
+  text-align: right
+  +push(16)
+  +column(4)
+  +last
+
+#mainnav
+  ul
+    padding-left: 0
+    list-style-type: none
+    +column(24)
+    +last
+    margin: 0 auto
+    li
+      +column(6)
+      *
+        display: block
+        text-align: center
+        width: 100%
+footer
+  +column(24)
+  +last
+
+.flush
+  clear: both
