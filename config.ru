@@ -11,17 +11,12 @@ use Rack::ETag
 
 # 301 Permanent Redirect
 # 302 Found
-# 303 See Other
-# 304 Not Modified
-# 305 Use Proxy
-# 306 Unused
-# 307 Temporary Redirect
 use Rack::Rewrite do
     r302 %r{^/support}, '/Scratch/en/support/index.html'
-    r306 %r{^/src}, '/404.html'
-    r306 %r{^/build}, '/404.html'
-    r306 %r{^/html5boilerplate}, '/404.html'
-    r306 %r{^/test}, '/404.html'
+    r302 %r{^/src}, '/404.html'
+    r302 %r{^/build}, '/404.html'
+    r302 %r{^/html5boilerplate}, '/404.html'
+    r302 %r{^/test}, '/404.html'
 end
 
 $rootdir="site"
