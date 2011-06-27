@@ -20,24 +20,32 @@ $ycolor7: #303237
 $ycolor8: #1F2024 
 $ycolor9: #0F1011
 
-$main-background-color: $ycolorb
+$higlightcolor:  #28C
+$higlightcolor-shadow:  #058
+$higlightcolor-reflect:  #6AF
 
+$main-background-color: $ycolor1
 
+// Background colors
 body
   background: $main-background-color
   &.bp 
+    margin-top: 30px
+    background: $main-background-color
     h1,h2,h3,h4,h5,h6
-      color: ycolor0
-      text-shadow: 0 0 2px rgba(#000,0.9)
+      color: $ycolor4
+      font-weight: bold
+      letter-spacing: -0.05em
+      text-shadow: -1px -1px 0px $ycolor6, 0px 1px 0px $ycolorb
+      a:hover
+        text-shadow: -1px -1px 0px $ycolor6, 0px 1px 0px $ycolorb,0 0 1px rgba(#30F,0.7)
     a
       text-decoration: none
-      color: $ycolor0
+      color: $ycolor4
       &:visited
-        color: $ycolor0
+        color: $ycolor4
       &:hover, &:active
-        color: #D86
-        
-
+        color: $higlightcolor
 
 // Transition for all elements
 * 
@@ -71,7 +79,9 @@ h1
 
 .block
   +column(6)
+  +prepend-top(30px)
   +innerblock
+  margin-right: +span(1)
   &:hover
     background-color: rgba(#000,0.05)
 
