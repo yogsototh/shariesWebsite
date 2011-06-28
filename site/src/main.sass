@@ -33,13 +33,18 @@ $main-background-color: $ycolorb
 body
   background: $main-background-color
   &.bp 
-    margin-top: 30px
     background: $main-background-color
     h1,h2,h3,h4,h5,h6
       color: $ycolor4
       font-weight: bold
       letter-spacing: -0.05em
       +text-shadow($ycolor6 -1px -1px 0px,$ycolorb 0px 1px 0px )
+      a
+        color: $ycolor2
+        &:visited
+          color: $ycolor2
+        &:hover, &:active
+          color: $higlightcolor
       a:hover
         +text-shadow($ycolor6 -1px -1px 0px ,$ycolorb 0px 1px 0px ,rgba(#38C,0.5) 0 0 4px  )
     a
@@ -92,19 +97,6 @@ h1
   &:hover
     background-color: rgba(#000,0.05)
 
-=ybutton
-  text-align: center
-  text-size: 14px
-  padding: 4px
-  height: 22px
-  +text-shadow(rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
-  +button-base
-  +border-radius(22px)
-  +button-colors($ycolor6, rgba(#000,0.2), rgba(#000,0.3), rgba(#FFF,0.5))
-  &:hover
-    +text-shadow(#38C 0 0 3px, rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
-    +button-colors($ycolorb, rgba(#000,0.3), rgba(#000,0.5), rgba(#FFF,0.5))
-
 =button
   +text-shadow(rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
   +border-radius(3px)
@@ -125,8 +117,15 @@ h1
     +button
     width: 100%
 
+#mainnav
+  +column(24,true)
+  background: rgba(#831,.2)
+  +prepend-top(40px)
+  +append-bottom(40px)
+
 #mainlinks
-  +push(3)
+  +push(2)
+  +column(22)
 
 #choixrss
   text-align: right
@@ -135,22 +134,17 @@ h1
   +column(4)
   +last
   a
+    +button
     width: 100%
-    +ybutton
 
 #mainnav
   ul
     padding-left: 0
     list-style-type: none
-    +column(24)
-    +last
     margin: 0 auto
     li
-      +column(6)
-      *
-        display: block
-        text-align: center
-        width: 100%
+        +column(5)
+        background: rgba(#000,.2)
 footer
   +column(24)
   +last
