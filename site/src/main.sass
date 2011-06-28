@@ -21,11 +21,12 @@ $ycolor7: #303237
 $ycolor8: #1F2024 
 $ycolor9: #0F1011
 
-$higlightcolor:  #28C
+// $higlightcolor:  #28C
+$higlightcolor:  $ycolor3 + #027
 $higlightcolor-shadow:  #058
 $higlightcolor-reflect:  #6AF
 
-$main-background-color: $ycolor1
+$main-background-color: $ycolorb
 
 
 // Background colors
@@ -40,7 +41,7 @@ body
       letter-spacing: -0.05em
       +text-shadow($ycolor6 -1px -1px 0px,$ycolorb 0px 1px 0px )
       a:hover
-        +text-shadow($ycolor6 -1px -1px 0px ,$ycolorb 0px 1px 0px ,rgba(#30F,0.7) 0 0 1px  )
+        +text-shadow($ycolor6 -1px -1px 0px ,$ycolorb 0px 1px 0px ,rgba(#38C,0.5) 0 0 4px  )
     a
       text-decoration: none
       color: $ycolor4
@@ -53,12 +54,15 @@ body
 * 
   +transition
 
-=debugblock
-  +box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset)
-  background: rgba(#EA6,0.08)
-
+// =debugblock
+//   +box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset)
+//   background: rgba(#EA6,0.08)
+// 
 // *
 //   +debugblock
+
+.clickable
+  cursor: pointer
 
 // large container
 #container
@@ -84,27 +88,42 @@ h1
   +prepend-top(10px)
   +append-bottom(20px)
   +innerblock
-  margin-right: +span(1)
+  margin-right: span(1) + 2 * 10px
   &:hover
     background-color: rgba(#000,0.05)
 
 =ybutton
   text-align: center
   text-size: 14px
-  padding: 3px
+  padding: 4px
+  height: 22px
   +text-shadow(rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
   +button-base
-  +border-radius(3px)
-  +button-colors($ycolor0, rgba(#000,0.2), rgba(#000,0.3), rgba(#FFF,0.5))
+  +border-radius(22px)
+  +button-colors($ycolor6, rgba(#000,0.2), rgba(#000,0.3), rgba(#FFF,0.5))
   &:hover
     +text-shadow(#38C 0 0 3px, rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
     +button-colors($ycolorb, rgba(#000,0.3), rgba(#000,0.5), rgba(#FFF,0.5))
 
+=button
+  +text-shadow(rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
+  +border-radius(3px)
+  text-align: center
+  +button-button(left)
+  +button-hover-colors
+  +button-colors($ycolor5, $ycolorc, rgba(#000,.3), rgba(#FFF,.3))
+  +button-hover-colors($higlightcolor + #446, $ycolorc - #111, rgba(#000,.3), rgba(#FFF,.3))
+  +button-active-colors($higlightcolor + #448, $ycolorc - #111, rgba(#FFF,.3), rgba(#000,.3))
+  &:hover
+    +text-shadow(#38C 0 0 3px, rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
+  &:active
+    +text-shadow(#3AF 0 0 4px, rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
+
 #choixlang
   +column(4)
   a
+    +button
     width: 100%
-    +ybutton
 
 #mainlinks
   +push(3)

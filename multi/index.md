@@ -34,9 +34,9 @@ $('document').ready(function() {
 <% end %>
 
 <div id="mainlinks">
-<%= block("Secure","javascript:return false;","SHA1 ensure strong password generation","left secure") %>
-<%= block("Easy","javascript:return false;","Remember only one master password", "left easy") %>
-<%= block("Portable","javascript:return false;","Dashboard widget, Javascript applet, etc...", "left portable") %>
+<%= block("Secure","javascript:return false;","SHA1 ensure strong password generation","left secure clickable") %>
+<%= block("Easy","javascript:return false;","Remember only one master password", "left easy clickable") %>
+<%= block("Portable","javascript:return false;","Dashboard widget, Javascript applet, etc...", "left portable clickable") %>
 </div>
 
 <div class="flush"></div>
@@ -65,6 +65,9 @@ Your password is copied, you can paste it.
 </div>
 
 <div class="flush"></div>
-<%= block("Get it!", "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=436268354&mt=8","On the Apple Store") %>
+<%= block("Get it!", 
+          "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=436268354&mt=8",
+          "On the Apple Store", 
+          "clickable") %>
 
 <div class="flush"></div>
