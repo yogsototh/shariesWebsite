@@ -1,11 +1,12 @@
 @import "blueprint/debug"
+@import "blueprint/buttons"
 
 $default-transition-duration: .2s
 @import "compass/css3/transition"
 
-@import "compass/css3/border-radius"
-@import "compass/css3/box-shadow"
-@import "compass/css3/text-shadow";
+@import compass/css3/border-radius
+@import compass/css3/box-shadow
+@import compass/css3/text-shadow
 
 $ycolorb: #EFEFF4
 $ycolorc: #E3E5ED
@@ -26,6 +27,7 @@ $higlightcolor-reflect:  #6AF
 
 $main-background-color: $ycolor1
 
+
 // Background colors
 body
   background: $main-background-color
@@ -36,9 +38,9 @@ body
       color: $ycolor4
       font-weight: bold
       letter-spacing: -0.05em
-      text-shadow: -1px -1px 0px $ycolor6, 0px 1px 0px $ycolorb
+      +text-shadow($ycolor6 -1px -1px 0px,$ycolorb 0px 1px 0px )
       a:hover
-        text-shadow: -1px -1px 0px $ycolor6, 0px 1px 0px $ycolorb,0 0 1px rgba(#30F,0.7)
+        +text-shadow($ycolor6 -1px -1px 0px ,$ycolorb 0px 1px 0px ,rgba(#30F,0.7) 0 0 1px  )
     a
       text-decoration: none
       color: $ycolor4
@@ -79,20 +81,43 @@ h1
 
 .block
   +column(6)
-  +prepend-top(30px)
+  +prepend-top(10px)
+  +append-bottom(20px)
   +innerblock
   margin-right: +span(1)
   &:hover
     background-color: rgba(#000,0.05)
 
+=ybutton
+  text-align: center
+  text-size: 14px
+  padding: 3px
+  +text-shadow(rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
+  +button-base
+  +border-radius(3px)
+  +button-colors($ycolor0, rgba(#000,0.2), rgba(#000,0.3), rgba(#FFF,0.5))
+  &:hover
+    +text-shadow(#38C 0 0 3px, rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
+    +button-colors($ycolorb, rgba(#000,0.3), rgba(#000,0.5), rgba(#FFF,0.5))
+
 #choixlang
   +column(4)
+  a
+    width: 100%
+    +ybutton
+
+#mainlinks
+  +push(3)
 
 #choixrss
   text-align: right
+  +push(3)
   +push(16)
   +column(4)
   +last
+  a
+    width: 100%
+    +ybutton
 
 #mainnav
   ul
