@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+{ unicorn -D } & \
+{ gvim . } & \
+{ cd site; compass watch }
