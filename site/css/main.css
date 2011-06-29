@@ -49,10 +49,10 @@ body.bp a:hover, body.bp a:active {
   -webkit-transition-property: all;
   -o-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 /* line 69, ../src/main.sass */
@@ -81,7 +81,7 @@ h1 {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 230px;
+  width: 310px;
   margin-top: 10px;
   margin-bottom: 20px;
   background-color: rgba(0, 0, 0, 0.02);
@@ -95,7 +95,6 @@ h1 {
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  margin-right: 50px;
 }
 /* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .block {
@@ -105,104 +104,97 @@ h1 {
 .block > * {
   padding: 20px;
 }
-/* line 97, ../src/main.sass */
+/* line 96, ../src/main.sass */
 .block:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
+/* line 98, ../src/main.sass */
+.block:last-child {
+  margin-right: 0;
+}
 
-/* line 114, ../src/main.sass */
+/* line 130, ../src/main.sass */
 #choixlang {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 150px;
+  width: 110px;
+  font-size: 14px;
 }
 /* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #choixlang {
   overflow-x: hidden;
 }
-/* line 116, ../src/main.sass */
+/* line 104, ../src/main.sass */
+#choixlang a:hover {
+  -moz-border-radius: 2ex;
+  -webkit-border-radius: 2ex;
+  -o-border-radius: 2ex;
+  -ms-border-radius: 2ex;
+  -khtml-border-radius: 2ex;
+  border-radius: 2ex;
+  color: #efeff4;
+  background-color: #868b96;
+}
+/* line 108, ../src/main.sass */
 #choixlang a {
-  text-shadow: rgba(0, 0, 0, 0.5) 0px -1px 0px, rgba(255, 255, 255, 0.5) 0px 1px 0px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
   text-align: center;
-  display: inline;
-  float: left;
-  display: block;
-  margin: 0.7em 0.5em 0.7em 0;
-  border-width: 1px;
-  border-style: solid;
-  font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-  font-size: 100%;
-  line-height: 130%;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  width: auto;
-  overflow: visible;
-  padding: 4px 10px 3px 7px;
-  background-color: #e3e5ed;
-  border-color: rgba(255, 255, 255, 0.3) rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.3);
-  color: #51555c;
   width: 100%;
+  display: inline-block;
+  color: #b4b8c5;
 }
-/* line 75, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-#choixlang a img {
-  margin: 0 3px -3px 0 !important;
-  padding: 0;
-  border: none;
-  width: 16px;
-  height: 16px;
-  float: none;
-}
-/* line 95, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-#choixlang a[type] {
-  padding: 4px 10px 4px 7px;
-  line-height: 17px;
-}
-/* line 98, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-*:first-child + html #choixlang a[type] {
-  padding: 4px 10px 3px 7px;
-}
-/* line 62, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
+/* line 113, ../src/main.sass */
 #choixlang a:hover {
-  background-color: #dff4ff;
-  border-color: #d2f1ff #c2e1ef #c2e1ef #d2f1ff;
-  color: #336699;
-}
-/* line 62, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-#choixlang a:hover {
-  background-color: #d2d4dc;
-  border-color: rgba(255, 255, 255, 0.3) rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.3);
-  color: #caf1ff;
-}
-/* line 47, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-#choixlang a:active {
-  background-color: #d2d4dc;
-  border-color: rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.3) rgba(0, 0, 0, 0.3);
-  color: #caf1ff;
-}
-/* line 109, ../src/main.sass */
-#choixlang a:hover {
-  text-shadow: #3388cc 0 0 3px, rgba(0, 0, 0, 0.5) 0px -1px 0px, rgba(255, 255, 255, 0.5) 0px 1px 0px;
-}
-/* line 111, ../src/main.sass */
-#choixlang a:active {
-  text-shadow: #33aaff 0 0 4px, rgba(0, 0, 0, 0.5) 0px -1px 0px, rgba(255, 255, 255, 0.5) 0px 1px 0px;
+  color: #efeff4;
 }
 
-/* line 120, ../src/main.sass */
+/* line 135, ../src/main.sass */
+#choixrss {
+  text-align: right;
+  display: inline;
+  float: left;
+  position: relative;
+  margin: 0 -720px 1.5em 720px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 110px;
+  margin-right: 0;
+  font-size: 14px;
+}
+/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #choixrss {
+  overflow-x: hidden;
+}
+/* line 104, ../src/main.sass */
+#choixrss a:hover {
+  -moz-border-radius: 2ex;
+  -webkit-border-radius: 2ex;
+  -o-border-radius: 2ex;
+  -ms-border-radius: 2ex;
+  -khtml-border-radius: 2ex;
+  border-radius: 2ex;
+  color: #efeff4;
+  background-color: #868b96;
+}
+/* line 108, ../src/main.sass */
+#choixrss a {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  color: #b4b8c5;
+}
+/* line 113, ../src/main.sass */
+#choixrss a:hover {
+  color: #efeff4;
+}
+
+/* line 142, ../src/main.sass */
 #mainnav {
   display: inline;
   float: left;
-  margin-right: 0;
+  margin-right: 10px;
   width: 950px;
-  background: rgba(136, 51, 17, 0.2);
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -210,132 +202,95 @@ h1 {
 * html #mainnav {
   overflow-x: hidden;
 }
-
-/* line 126, ../src/main.sass */
-#mainlinks {
-  display: inline;
-  float: left;
-  position: relative;
-  margin: 0 -80px 1.5em 80px;
+/* line 146, ../src/main.sass */
+#mainnav ul {
+  width: 350px;
+  height: 2.2ex;
+  margin: 0 auto;
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0 auto;
+}
+/* line 153, ../src/main.sass */
+#mainnav ul li {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 870px;
+  width: 110px;
+  text-align: center;
+  font-size: 14px;
+}
+/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #mainnav ul li {
+  overflow-x: hidden;
+}
+/* line 104, ../src/main.sass */
+#mainnav ul li a:hover {
+  -moz-border-radius: 2ex;
+  -webkit-border-radius: 2ex;
+  -o-border-radius: 2ex;
+  -ms-border-radius: 2ex;
+  -khtml-border-radius: 2ex;
+  border-radius: 2ex;
+  color: #efeff4;
+  background-color: #868b96;
+}
+/* line 108, ../src/main.sass */
+#mainnav ul li a {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  color: #b4b8c5;
+}
+/* line 113, ../src/main.sass */
+#mainnav ul li a:hover {
+  color: #efeff4;
+}
+/* line 157, ../src/main.sass */
+#mainnav ul li:last-child {
+  margin-right: 0;
+}
+
+/* line 160, ../src/main.sass */
+#mainlinks {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
 }
 /* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #mainlinks {
   overflow-x: hidden;
 }
 
-/* line 130, ../src/main.sass */
-#choixrss {
-  text-align: right;
-  display: inline;
-  float: left;
-  position: relative;
-  margin: 0 -120px 1.5em 120px;
-  display: inline;
-  float: left;
-  position: relative;
-  margin: 0 -640px 1.5em 640px;
+/* line 163, ../src/main.sass */
+.slideshow {
+  background-color: rgba(0, 0, 0, 0.02);
+  -moz-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
+  -webkit-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
+  -o-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
+  box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 150px;
-  margin-right: 0;
+  width: 950px;
+}
+/* line 88, ../src/main.sass */
+.slideshow > * {
+  padding: 20px;
 }
 /* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #choixrss {
+* html .slideshow {
   overflow-x: hidden;
 }
-/* line 136, ../src/main.sass */
-#choixrss a {
-  text-shadow: rgba(0, 0, 0, 0.5) 0px -1px 0px, rgba(255, 255, 255, 0.5) 0px 1px 0px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
-  text-align: center;
-  display: inline;
-  float: left;
-  display: block;
-  margin: 0.7em 0.5em 0.7em 0;
-  border-width: 1px;
-  border-style: solid;
-  font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
-  font-size: 100%;
-  line-height: 130%;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  width: auto;
-  overflow: visible;
-  padding: 4px 10px 3px 7px;
-  background-color: #e3e5ed;
-  border-color: rgba(255, 255, 255, 0.3) rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.3);
-  color: #51555c;
-  width: 100%;
-}
-/* line 75, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-#choixrss a img {
-  margin: 0 3px -3px 0 !important;
-  padding: 0;
-  border: none;
-  width: 16px;
-  height: 16px;
-  float: none;
-}
-/* line 95, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-#choixrss a[type] {
-  padding: 4px 10px 4px 7px;
-  line-height: 17px;
-}
-/* line 98, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-*:first-child + html #choixrss a[type] {
-  padding: 4px 10px 3px 7px;
-}
-/* line 62, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-#choixrss a:hover {
-  background-color: #dff4ff;
-  border-color: #d2f1ff #c2e1ef #c2e1ef #d2f1ff;
-  color: #336699;
-}
-/* line 62, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-#choixrss a:hover {
-  background-color: #d2d4dc;
-  border-color: rgba(255, 255, 255, 0.3) rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.3);
-  color: #caf1ff;
-}
-/* line 47, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_buttons.scss */
-#choixrss a:active {
-  background-color: #d2d4dc;
-  border-color: rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.3) rgba(0, 0, 0, 0.3);
-  color: #caf1ff;
-}
-/* line 109, ../src/main.sass */
-#choixrss a:hover {
-  text-shadow: #3388cc 0 0 3px, rgba(0, 0, 0, 0.5) 0px -1px 0px, rgba(255, 255, 255, 0.5) 0px 1px 0px;
-}
-/* line 111, ../src/main.sass */
-#choixrss a:active {
-  text-shadow: #33aaff 0 0 4px, rgba(0, 0, 0, 0.5) 0px -1px 0px, rgba(255, 255, 255, 0.5) 0px 1px 0px;
-}
 
-/* line 141, ../src/main.sass */
-#mainnav ul {
-  padding-left: 0;
-  list-style-type: none;
-  margin: 0 auto;
-}
-/* line 146, ../src/main.sass */
-#mainnav ul li * {
-  display: block;
-  text-align: center;
-}
-
-/* line 149, ../src/main.sass */
+/* line 167, ../src/main.sass */
 footer {
   display: inline;
   float: left;
@@ -348,7 +303,7 @@ footer {
   overflow-x: hidden;
 }
 
-/* line 153, ../src/main.sass */
+/* line 171, ../src/main.sass */
 .flush {
   clear: both;
 }

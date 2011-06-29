@@ -1,7 +1,7 @@
 @import "blueprint/debug"
 @import "blueprint/buttons"
 
-$default-transition-duration: .2s
+$default-transition-duration: .5s
 @import "compass/css3/transition"
 
 @import compass/css3/border-radius
@@ -59,9 +59,9 @@ body
 * 
   +transition
 
-// =debugblock
-//   +box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset)
-//   background: rgba(#EA6,0.08)
+=debug
+  +box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset)
+  background: rgba(#EA6,0.08)
 // 
 // *
 //   +debugblock
@@ -89,13 +89,29 @@ h1
     padding: 20px
 
 .block
-  +column(6)
+  +column(8)
   +prepend-top(10px)
   +append-bottom(20px)
   +innerblock
-  margin-right: span(1) + 2 * 10px
   &:hover
     background-color: rgba(#000,0.05)
+  &:last-child
+    +last
+
+
+=ybutton
+  font-size: 14px
+  a:hover
+    +border-radius(2ex)
+    color: $ycolorb
+    background-color: $ycolor3
+  a
+    text-align: center
+    width: 100%
+    display: inline-block
+    color: $ycolor1
+    &:hover
+      color: $ycolorb
 
 =button
   +text-shadow(rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
@@ -112,39 +128,42 @@ h1
     +text-shadow(#3AF 0 0 4px, rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
 
 #choixlang
-  +column(4)
-  a
-    +button
-    width: 100%
+  +column(3)
+  +ybutton
 
-#mainnav
-  +column(24,true)
-  background: rgba(#831,.2)
-  +prepend-top(40px)
-  +append-bottom(40px)
-
-#mainlinks
-  +push(2)
-  +column(22)
 
 #choixrss
   text-align: right
-  +push(3)
-  +push(16)
-  +column(4)
+  +push(18)
+  +column(3)
   +last
-  a
-    +button
-    width: 100%
+  +ybutton
 
 #mainnav
+  +column(24)
+  +prepend-top(40px)
+  +append-bottom(40px)
   ul
+    width: +span(9)
+    height: 2.2ex
+    margin: 0 auto
     padding-left: 0
     list-style-type: none
     margin: 0 auto
     li
-        +column(5)
-        background: rgba(#000,.2)
+      +column(3)
+      text-align: center
+      +ybutton
+      &:last-child
+        +last
+
+#mainlinks
+  +column(24,false)
+
+.slideshow
+  +innerblock
+  +column(24)
+
 footer
   +column(24)
   +last
