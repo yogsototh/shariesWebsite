@@ -7,6 +7,7 @@ $default-transition-duration: .5s
 @import compass/css3/border-radius
 @import compass/css3/box-shadow
 @import compass/css3/text-shadow
+@import compass/css3/gradient
 
 $ycolorb: #EFEFF4
 $ycolorc: #E3E5ED
@@ -59,6 +60,14 @@ body
 * 
   +transition
 
+header
+  height: 80px
+  +border-radius(0 0 8px 8px)
+  +box-shadow(rgba(#000,.3) 0 5px 5px)
+  +linear-gradient(color-stops($ycolor5,$ycolor7))
+  hgroup
+    +column(18)
+
 =debug
   +box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset)
   background: rgba(#EA6,0.08)
@@ -102,10 +111,11 @@ h1
 =ybutton
   font-size: 14px
   a:hover
-    +border-radius(2ex)
     color: $ycolorb
-    background-color: $ycolor3
+    background-color: rgba(#000,.3)
+    +box-shadow(rgba(#000,.3) 0 1px 3px inset,rgba(#FFF,.3) 0 1px 0)  
   a
+    +border-radius(2ex)
     text-align: center
     width: 100%
     display: inline-block
@@ -134,7 +144,6 @@ h1
 
 #choixrss
   text-align: right
-  +push(18)
   +column(3)
   +last
   +ybutton
