@@ -1,51 +1,46 @@
-/* line 31, ../src/main.sass */
+/* line 33, ../src/main.sass */
 body {
   margin: 0;
-  font-family: Futura, Molengo;
-  background: #efeff4;
-}
-/* line 35, ../src/main.sass */
-body.bp {
+  font-family: Futura, Molengo, sans-serif;
   background: #efeff4;
 }
 /* line 37, ../src/main.sass */
+body.bp {
+  background: #efeff4;
+}
+/* line 39, ../src/main.sass */
 body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
   color: #60646c;
   font-weight: bold;
   letter-spacing: -0.05em;
-  text-shadow: #41444a -1px -1px 0px, #efeff4 0px 1px 0px;
 }
-/* line 42, ../src/main.sass */
+/* line 43, ../src/main.sass */
 body.bp h1 a, body.bp h2 a, body.bp h3 a, body.bp h4 a, body.bp h5 a, body.bp h6 a {
   color: #9ca1ad;
 }
-/* line 44, ../src/main.sass */
+/* line 45, ../src/main.sass */
 body.bp h1 a:visited, body.bp h2 a:visited, body.bp h3 a:visited, body.bp h4 a:visited, body.bp h5 a:visited, body.bp h6 a:visited {
   color: #9ca1ad;
 }
-/* line 46, ../src/main.sass */
+/* line 47, ../src/main.sass */
 body.bp h1 a:hover, body.bp h1 a:active, body.bp h2 a:hover, body.bp h2 a:active, body.bp h3 a:hover, body.bp h3 a:active, body.bp h4 a:hover, body.bp h4 a:active, body.bp h5 a:hover, body.bp h5 a:active, body.bp h6 a:hover, body.bp h6 a:active {
-  color: #86adff;
+  color: #86adeb;
 }
-/* line 48, ../src/main.sass */
-body.bp h1 a:hover, body.bp h2 a:hover, body.bp h3 a:hover, body.bp h4 a:hover, body.bp h5 a:hover, body.bp h6 a:hover {
-  text-shadow: #41444a -1px -1px 0px, #efeff4 0px 1px 0px, rgba(51, 136, 204, 0.5) 0 0 4px;
-}
-/* line 50, ../src/main.sass */
+/* line 49, ../src/main.sass */
 body.bp a {
   text-decoration: none;
   color: #60646c;
 }
-/* line 53, ../src/main.sass */
+/* line 52, ../src/main.sass */
 body.bp a:visited {
   color: #60646c;
 }
-/* line 55, ../src/main.sass */
+/* line 54, ../src/main.sass */
 body.bp a:hover, body.bp a:active {
-  color: #86adff;
+  color: #86adeb;
 }
 
-/* line 59, ../src/main.sass */
+/* line 58, ../src/main.sass */
 * {
   -moz-transition-property: all;
   -webkit-transition-property: all;
@@ -57,7 +52,7 @@ body.bp a:hover, body.bp a:active {
   transition-duration: 0.5s;
 }
 
-/* line 62, ../src/main.sass */
+/* line 61, ../src/main.sass */
 hgroup#maintitle {
   margin: 0.5em 0;
   font-size: 2em;
@@ -73,34 +68,39 @@ hgroup#maintitle {
   background-image: -o-linear-gradient(top, #60646c, #51555c);
   background-image: linear-gradient(top, #60646c, #51555c);
 }
-/* line 66, ../src/main.sass */
+/* line 65, ../src/main.sass */
 hgroup#maintitle h1, hgroup#maintitle h1 a, hgroup#maintitle h2, hgroup#maintitle h2 a {
+  font-weight: normal;
   color: #0f1011;
   text-shadow: 0 0 2px rgba(239, 239, 244, 0.5);
 }
+/* line 69, ../src/main.sass */
+hgroup#maintitle h1 a:hover, hgroup#maintitle h2 a:hover {
+  color: #002255;
+}
 
-/* line 82, ../src/main.sass */
+/* line 84, ../src/main.sass */
 .clickable {
   cursor: pointer;
 }
 
-/* line 86, ../src/main.sass */
+/* line 88, ../src/main.sass */
 #container {
   width: span(24);
   margin: 0 auto;
 }
 
-/* line 91, ../src/main.sass */
+/* line 93, ../src/main.sass */
 a {
   text-decoration: none;
 }
 
-/* line 94, ../src/main.sass */
-h1 {
+/* line 96, ../src/main.sass */
+h1, h2 {
   text-align: center;
 }
 
-/* line 104, ../src/main.sass */
+/* line 106, ../src/main.sass */
 .block {
   background-color: rgba(0, 0, 0, 0.02);
   -moz-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
@@ -114,37 +114,42 @@ h1 {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 101, ../src/main.sass */
+/* line 103, ../src/main.sass */
 .block > * {
   padding: 20px;
 }
-/* line 106, ../src/main.sass */
+/* line 108, ../src/main.sass */
 .block:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* line 139, ../src/main.sass */
+/* line 147, ../src/main.sass */
 #prelinks {
   width: 600px;
   margin: 0.5em auto;
   height: 1em;
 }
 
-/* line 145, ../src/main.sass */
+/* line 153, ../src/main.sass */
 #choixlang {
   float: left;
   font-size: 14px;
 }
-/* line 111, ../src/main.sass */
+/* line 113, ../src/main.sass */
 #choixlang a:hover {
   color: #efeff4;
   background-color: rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
 }
-/* line 115, ../src/main.sass */
+/* line 117, ../src/main.sass */
+#choixlang a:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 2px black;
+}
+/* line 120, ../src/main.sass */
 #choixlang a {
   padding: 0.2em;
   -moz-border-radius: 2ex;
@@ -156,28 +161,33 @@ h1 {
   text-align: center;
   width: 100%;
   display: inline-block;
-  color: #b4b8c5;
+  color: #9ca1ad;
 }
-/* line 122, ../src/main.sass */
+/* line 127, ../src/main.sass */
 #choixlang a:hover {
   color: #efeff4;
 }
 
-/* line 149, ../src/main.sass */
+/* line 157, ../src/main.sass */
 #choixrss {
   float: right;
   font-size: 14px;
 }
-/* line 111, ../src/main.sass */
+/* line 113, ../src/main.sass */
 #choixrss a:hover {
   color: #efeff4;
   background-color: rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
 }
-/* line 115, ../src/main.sass */
+/* line 117, ../src/main.sass */
+#choixrss a:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 2px black;
+}
+/* line 120, ../src/main.sass */
 #choixrss a {
   padding: 0.2em;
   -moz-border-radius: 2ex;
@@ -189,41 +199,48 @@ h1 {
   text-align: center;
   width: 100%;
   display: inline-block;
-  color: #b4b8c5;
+  color: #9ca1ad;
 }
-/* line 122, ../src/main.sass */
+/* line 127, ../src/main.sass */
 #choixrss a:hover {
   color: #efeff4;
 }
 
-/* line 153, ../src/main.sass */
+/* line 161, ../src/main.sass */
 #mainnav {
-  width: 50%;
+  width: 600px;
+  padding: 0;
+  margin: 2.5em auto;
 }
-/* line 155, ../src/main.sass */
+/* line 165, ../src/main.sass */
 #mainnav ul {
-  width: +span(9);
   height: 2.2ex;
-  margin: 0 auto;
-  padding-left: 0;
+  padding: 0;
   list-style-type: none;
-  margin: 0 auto;
 }
-/* line 162, ../src/main.sass */
+/* line 169, ../src/main.sass */
 #mainnav ul li {
   text-align: center;
+  float: left;
+  width: 160px;
+  margin: 0 20px;
   font-size: 14px;
 }
-/* line 111, ../src/main.sass */
+/* line 113, ../src/main.sass */
 #mainnav ul li a:hover {
   color: #efeff4;
   background-color: rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
 }
-/* line 115, ../src/main.sass */
+/* line 117, ../src/main.sass */
+#mainnav ul li a:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 2px black;
+}
+/* line 120, ../src/main.sass */
 #mainnav ul li a {
   padding: 0.2em;
   -moz-border-radius: 2ex;
@@ -235,14 +252,19 @@ h1 {
   text-align: center;
   width: 100%;
   display: inline-block;
-  color: #b4b8c5;
+  color: #9ca1ad;
 }
-/* line 122, ../src/main.sass */
+/* line 127, ../src/main.sass */
 #mainnav ul li a:hover {
   color: #efeff4;
 }
+/* line 176, ../src/main.sass */
+#mainnav ul li * {
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
-/* line 166, ../src/main.sass */
+/* line 180, ../src/main.sass */
 .slideshow {
   background-color: rgba(0, 0, 0, 0.02);
   -moz-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
@@ -256,18 +278,18 @@ h1 {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 101, ../src/main.sass */
+/* line 103, ../src/main.sass */
 .slideshow > * {
   padding: 20px;
 }
 
-/* line 169, ../src/main.sass */
+/* line 183, ../src/main.sass */
 .flush {
   clear: both;
 }
 
-/* line 172, ../src/main.sass */
+/* line 186, ../src/main.sass */
 #main {
-  width: 50%;
-  margin-left: 25%;
+  width: 600px;
+  margin: 0 auto;
 }

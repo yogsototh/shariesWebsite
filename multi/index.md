@@ -3,43 +3,9 @@ title: YPassword
 noSubMenu: true
 menupriority: 1
 -----
-<% content_for :js do %>
-<script>
-var blocks=["secure","easy","portable"];
-function show(name) {
-    for ( var i in blocks ) {
-        el=blocks[i];
-        if (el == name) { continue; }
-        // console.log('HIDE: #'+el+'content');
-        $('#'+el+'content').hide();
-    }
-    $('#'+name+'content').show();
-    // console.log('SHOW: #'+name+'content');
-}
-
-$('document').ready(function() {
-    $('.secure').click(function() {show("secure")});
-    $('.easy').click(function() {show("easy")});
-    $('.portable').click(function() {show("portable")});
-    for (var i in blocks) {
-        el=blocks[i];
-        $('#'+el+'content').hide();
-    }
-});
-</script>
-<% end %>
-
 <% content_for :title do %>
     <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=436268354&mt=8">YPassword</a>
 <% end %>
-
-<div id="mainlinks">
-<%= block("Secure","javascript:return false;","SHA1 ensure strong password generation","left secure clickable") %>
-<%= block("Easy","javascript:return false;","Remember only one master password", "left easy clickable") %>
-<%= block("Portable","javascript:return false;","Dashboard widget, Javascript applet, etc...", "left portable clickable") %>
-</div>
-
-<div class="flush"></div>
 
 <div id="securecontent" class="slideshow big"><div class="inner">
 YPassword use SHA1

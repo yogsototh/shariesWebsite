@@ -61,47 +61,6 @@
         <article>
             <div class="content">
                 
-<div id="mainlinks">
-<div class="block left secure clickable">
-        <div class="inner">
-            <h3>
-                <a href="javascript:return false;"> Secure 
-                    <span class="nicer">»</span> 
-                </a>
-            </h3>
-            <p>
-                SHA1 ensure strong password generation
-            </p>
-        </div>
-    </div>
-<div class="block left easy clickable">
-        <div class="inner">
-            <h3>
-                <a href="javascript:return false;"> Easy 
-                    <span class="nicer">»</span> 
-                </a>
-            </h3>
-            <p>
-                Remember only one master password
-            </p>
-        </div>
-    </div>
-<div class="block left portable clickable">
-        <div class="inner">
-            <h3>
-                <a href="javascript:return false;"> Portable 
-                    <span class="nicer">»</span> 
-                </a>
-            </h3>
-            <p>
-                Dashboard widget, Javascript applet, etc...
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="flush"></div>
-
 <div id="securecontent" class="slideshow big"><div class="inner">
 YPassword use SHA1
 <img src="/Scratch//img/blog/2011-05-05-Screenshots/main_password.jpg" alt="main password view" style="display:block; margin-left:0;" />
@@ -171,30 +130,6 @@ Your password is copied, you can paste it.
   <script src="/js/plugins.js"></script>
   <script src="/js/script.js"></script>
   
-<script>
-var blocks=["secure","easy","portable"];
-function show(name) {
-    for ( var i in blocks ) {
-        el=blocks[i];
-        if (el == name) { continue; }
-        // console.log('HIDE: #'+el+'content');
-        $('#'+el+'content').hide();
-    }
-    $('#'+name+'content').show();
-    // console.log('SHOW: #'+name+'content');
-}
-
-$('document').ready(function() {
-    $('.secure').click(function() {show("secure")});
-    $('.easy').click(function() {show("easy")});
-    $('.portable').click(function() {show("portable")});
-    for (var i in blocks) {
-        el=blocks[i];
-        $('#'+el+'content').hide();
-    }
-});
-</script>
-
   <!-- end scripts-->
   <!--[if lt IE 7 ]>
     <script src="/js/libs/dd_belatedpng.js"></script>

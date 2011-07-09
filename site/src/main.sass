@@ -20,9 +20,11 @@ $ycolor8: #1F2024
 $ycolor9: #0F1011
 
 // $higlightcolor:  #28C
-$higlightcolor:  $ycolor3 + #027
+$higlightcolor:  $ycolor3 + #025
 $higlightcolor-shadow:  #058
 $higlightcolor-reflect:  #6AF
+
+$dark_highlight: #025
 
 $main-background-color: $ycolorb
 
@@ -30,7 +32,7 @@ $main-background-color: $ycolorb
 // Background colors
 body
   margin: 0
-  font-family: Futura, Molengo
+  font-family: Futura, Molengo, sans-serif
   background: $main-background-color
   &.bp 
     background: $main-background-color
@@ -38,15 +40,12 @@ body
       color: $ycolor4
       font-weight: bold
       letter-spacing: -0.05em
-      +text-shadow($ycolor6 -1px -1px 0px,$ycolorb 0px 1px 0px )
       a
         color: $ycolor2
         &:visited
           color: $ycolor2
         &:hover, &:active
           color: $higlightcolor
-      a:hover
-        +text-shadow($ycolor6 -1px -1px 0px ,$ycolorb 0px 1px 0px ,rgba(#38C,0.5) 0 0 4px  )
     a
       text-decoration: none
       color: $ycolor4
@@ -64,8 +63,11 @@ hgroup#maintitle
   font-size: 2em
   h1,h2
     &,a
+      font-weight: normal
       color: $ycolor9
       text-shadow: 0 0 2px rgba($ycolorb,.5)
+    a:hover
+      color: $dark_highlight
   border:
     top: solid 1px #000
     bottom: solid 1px #FFF
@@ -91,7 +93,7 @@ hgroup#maintitle
 a
   text-decoration: none
 
-h1
+h1,h2
   text-align: center
 
 =innerblock
@@ -111,14 +113,17 @@ h1
   a:hover
     color: $ycolorb
     background-color: rgba(#000,.3)
-    +box-shadow(rgba(#000,.3) 0 1px 3px inset,rgba(#FFF,.3) 0 1px 0)  
+    +box-shadow(rgba(#000,.3) 0 1px 3px inset,rgba(#FFF,.3) 0 1px 3px inset)  
+  a:active
+    background-color: rgba(#000,.5)
+    text-shadow: 0 0 2px #000
   a
     padding: .2em
     +border-radius(2ex)
     text-align: center
     width: 100%
     display: inline-block
-    color: $ycolor1
+    color: $ycolor2
     &:hover
       color: $ycolorb
 
@@ -136,8 +141,11 @@ h1
   &:active
     +text-shadow(#3AF 0 0 4px, rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
 
+
+$stdWidth: 600px
+
 #prelinks
-  width: 600px
+  width: $stdWidth
   margin: .5em auto
   height: 1em
 
@@ -151,17 +159,23 @@ h1
   +ybutton
 
 #mainnav
-  width: 50%
+  width: $stdWidth
+  padding: 0
+  margin: 2.5em auto
   ul
-    width: +span(9)
     height: 2.2ex
-    margin: 0 auto
-    padding-left: 0
+    padding: 0
     list-style-type: none
-    margin: 0 auto
     li
+      *
       text-align: center
+      float: left
+      width: ($stdWidth - 120px)/3
+      margin: 0 20px
       +ybutton
+      *
+        font-size: 1.5em
+        font-weight: bold
 
 .slideshow
   +innerblock
@@ -170,5 +184,5 @@ h1
   clear: both
 
 #main
-  width: 50%
-  margin-left: 25%
+  width: $stdWidth
+  margin: 0 auto
