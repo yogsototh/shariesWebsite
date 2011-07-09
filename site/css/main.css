@@ -1,49 +1,51 @@
-/* line 34, ../src/main.sass */
+/* line 31, ../src/main.sass */
 body {
+  margin: 0;
+  font-family: Futura, Molengo;
   background: #efeff4;
 }
-/* line 36, ../src/main.sass */
+/* line 35, ../src/main.sass */
 body.bp {
   background: #efeff4;
 }
-/* line 38, ../src/main.sass */
+/* line 37, ../src/main.sass */
 body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
   color: #60646c;
   font-weight: bold;
   letter-spacing: -0.05em;
   text-shadow: #41444a -1px -1px 0px, #efeff4 0px 1px 0px;
 }
-/* line 43, ../src/main.sass */
+/* line 42, ../src/main.sass */
 body.bp h1 a, body.bp h2 a, body.bp h3 a, body.bp h4 a, body.bp h5 a, body.bp h6 a {
   color: #9ca1ad;
 }
-/* line 45, ../src/main.sass */
+/* line 44, ../src/main.sass */
 body.bp h1 a:visited, body.bp h2 a:visited, body.bp h3 a:visited, body.bp h4 a:visited, body.bp h5 a:visited, body.bp h6 a:visited {
   color: #9ca1ad;
 }
-/* line 47, ../src/main.sass */
+/* line 46, ../src/main.sass */
 body.bp h1 a:hover, body.bp h1 a:active, body.bp h2 a:hover, body.bp h2 a:active, body.bp h3 a:hover, body.bp h3 a:active, body.bp h4 a:hover, body.bp h4 a:active, body.bp h5 a:hover, body.bp h5 a:active, body.bp h6 a:hover, body.bp h6 a:active {
   color: #86adff;
 }
-/* line 49, ../src/main.sass */
+/* line 48, ../src/main.sass */
 body.bp h1 a:hover, body.bp h2 a:hover, body.bp h3 a:hover, body.bp h4 a:hover, body.bp h5 a:hover, body.bp h6 a:hover {
   text-shadow: #41444a -1px -1px 0px, #efeff4 0px 1px 0px, rgba(51, 136, 204, 0.5) 0 0 4px;
 }
-/* line 51, ../src/main.sass */
+/* line 50, ../src/main.sass */
 body.bp a {
   text-decoration: none;
   color: #60646c;
 }
-/* line 54, ../src/main.sass */
+/* line 53, ../src/main.sass */
 body.bp a:visited {
   color: #60646c;
 }
-/* line 56, ../src/main.sass */
+/* line 55, ../src/main.sass */
 body.bp a:hover, body.bp a:active {
   color: #86adff;
 }
 
-/* line 60, ../src/main.sass */
+/* line 59, ../src/main.sass */
 * {
   -moz-transition-property: all;
   -webkit-transition-property: all;
@@ -55,67 +57,51 @@ body.bp a:hover, body.bp a:active {
   transition-duration: 0.5s;
 }
 
-/* line 63, ../src/main.sass */
-header {
-  height: 80px;
-  -moz-border-radius: 0 0 8px 8px;
-  -webkit-border-radius: 0 0 8px 8px;
-  -o-border-radius: 0 0 8px 8px;
-  -ms-border-radius: 0 0 8px 8px;
-  -khtml-border-radius: 0 0 8px 8px;
-  border-radius: 0 0 8px 8px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px;
-  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #51555c), color-stop(100%, #303237));
-  background-image: -webkit-linear-gradient(top, #51555c, #303237);
-  background-image: -moz-linear-gradient(top, #51555c, #303237);
-  background-image: -o-linear-gradient(top, #51555c, #303237);
-  background-image: -ms-linear-gradient(top, #51555c, #303237);
-  background-image: linear-gradient(top, #51555c, #303237);
+/* line 62, ../src/main.sass */
+hgroup#maintitle {
+  margin: 0.5em 0;
+  font-size: 2em;
+  border-top: solid 1px black;
+  border-bottom: solid 1px white;
+  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0 0 15px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 0 15px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.6) 0 0 15px inset;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 0 15px inset;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #60646c), color-stop(100%, #51555c));
+  background-image: -webkit-linear-gradient(top, #60646c, #51555c);
+  background-image: -moz-linear-gradient(top, #60646c, #51555c);
+  background-image: -o-linear-gradient(top, #60646c, #51555c);
+  background-image: linear-gradient(top, #60646c, #51555c);
 }
-/* line 68, ../src/main.sass */
-header hgroup {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 710px;
-}
-/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html header hgroup {
-  overflow-x: hidden;
+/* line 66, ../src/main.sass */
+hgroup#maintitle h1, hgroup#maintitle h1 a, hgroup#maintitle h2, hgroup#maintitle h2 a {
+  color: #0f1011;
+  text-shadow: 0 0 2px rgba(239, 239, 244, 0.5);
 }
 
-/* line 78, ../src/main.sass */
+/* line 82, ../src/main.sass */
 .clickable {
   cursor: pointer;
 }
 
-/* line 82, ../src/main.sass */
+/* line 86, ../src/main.sass */
 #container {
-  width: 950px;
+  width: span(24);
   margin: 0 auto;
 }
 
-/* line 87, ../src/main.sass */
+/* line 91, ../src/main.sass */
 a {
   text-decoration: none;
 }
 
-/* line 90, ../src/main.sass */
+/* line 94, ../src/main.sass */
 h1 {
   text-align: center;
 }
 
-/* line 100, ../src/main.sass */
+/* line 104, ../src/main.sass */
 .block {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 310px;
-  margin-top: 10px;
-  margin-bottom: 20px;
   background-color: rgba(0, 0, 0, 0.02);
   -moz-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
   -webkit-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
@@ -128,78 +114,29 @@ h1 {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .block {
-  overflow-x: hidden;
-}
-/* line 97, ../src/main.sass */
+/* line 101, ../src/main.sass */
 .block > * {
   padding: 20px;
 }
-/* line 105, ../src/main.sass */
+/* line 106, ../src/main.sass */
 .block:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
-/* line 107, ../src/main.sass */
-.block:last-child {
-  margin-right: 0;
-}
 
-/* line 140, ../src/main.sass */
-#choixlang {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 110px;
-  font-size: 14px;
-}
-/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #choixlang {
-  overflow-x: hidden;
-}
-/* line 113, ../src/main.sass */
-#choixlang a:hover {
-  color: #efeff4;
-  background-color: rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
-}
-/* line 117, ../src/main.sass */
-#choixlang a {
-  -moz-border-radius: 2ex;
-  -webkit-border-radius: 2ex;
-  -o-border-radius: 2ex;
-  -ms-border-radius: 2ex;
-  -khtml-border-radius: 2ex;
-  border-radius: 2ex;
-  text-align: center;
-  width: 100%;
-  display: inline-block;
-  color: #b4b8c5;
-}
-/* line 123, ../src/main.sass */
-#choixlang a:hover {
-  color: #efeff4;
+/* line 139, ../src/main.sass */
+#prelinks {
+  width: 600px;
+  margin: 0.5em auto;
+  height: 1em;
 }
 
 /* line 145, ../src/main.sass */
-#choixrss {
-  text-align: right;
-  display: inline;
+#choixlang {
   float: left;
-  margin-right: 10px;
-  width: 110px;
-  margin-right: 0;
   font-size: 14px;
 }
-/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #choixrss {
-  overflow-x: hidden;
-}
-/* line 113, ../src/main.sass */
-#choixrss a:hover {
+/* line 111, ../src/main.sass */
+#choixlang a:hover {
   color: #efeff4;
   background-color: rgba(0, 0, 0, 0.3);
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
@@ -207,8 +144,9 @@ h1 {
   -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
 }
-/* line 117, ../src/main.sass */
-#choixrss a {
+/* line 115, ../src/main.sass */
+#choixlang a {
+  padding: 0.2em;
   -moz-border-radius: 2ex;
   -webkit-border-radius: 2ex;
   -o-border-radius: 2ex;
@@ -220,27 +158,51 @@ h1 {
   display: inline-block;
   color: #b4b8c5;
 }
-/* line 123, ../src/main.sass */
+/* line 122, ../src/main.sass */
+#choixlang a:hover {
+  color: #efeff4;
+}
+
+/* line 149, ../src/main.sass */
+#choixrss {
+  float: right;
+  font-size: 14px;
+}
+/* line 111, ../src/main.sass */
+#choixrss a:hover {
+  color: #efeff4;
+  background-color: rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
+}
+/* line 115, ../src/main.sass */
+#choixrss a {
+  padding: 0.2em;
+  -moz-border-radius: 2ex;
+  -webkit-border-radius: 2ex;
+  -o-border-radius: 2ex;
+  -ms-border-radius: 2ex;
+  -khtml-border-radius: 2ex;
+  border-radius: 2ex;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  color: #b4b8c5;
+}
+/* line 122, ../src/main.sass */
 #choixrss a:hover {
   color: #efeff4;
 }
 
-/* line 151, ../src/main.sass */
+/* line 153, ../src/main.sass */
 #mainnav {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #mainnav {
-  overflow-x: hidden;
+  width: 50%;
 }
 /* line 155, ../src/main.sass */
 #mainnav ul {
-  width: 350px;
+  width: +span(9);
   height: 2.2ex;
   margin: 0 auto;
   padding-left: 0;
@@ -249,18 +211,10 @@ h1 {
 }
 /* line 162, ../src/main.sass */
 #mainnav ul li {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 110px;
   text-align: center;
   font-size: 14px;
 }
-/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #mainnav ul li {
-  overflow-x: hidden;
-}
-/* line 113, ../src/main.sass */
+/* line 111, ../src/main.sass */
 #mainnav ul li a:hover {
   color: #efeff4;
   background-color: rgba(0, 0, 0, 0.3);
@@ -269,8 +223,9 @@ h1 {
   -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 0;
 }
-/* line 117, ../src/main.sass */
+/* line 115, ../src/main.sass */
 #mainnav ul li a {
+  padding: 0.2em;
   -moz-border-radius: 2ex;
   -webkit-border-radius: 2ex;
   -o-border-radius: 2ex;
@@ -282,28 +237,12 @@ h1 {
   display: inline-block;
   color: #b4b8c5;
 }
-/* line 123, ../src/main.sass */
+/* line 122, ../src/main.sass */
 #mainnav ul li a:hover {
   color: #efeff4;
 }
+
 /* line 166, ../src/main.sass */
-#mainnav ul li:last-child {
-  margin-right: 0;
-}
-
-/* line 169, ../src/main.sass */
-#mainlinks {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
-}
-/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #mainlinks {
-  overflow-x: hidden;
-}
-
-/* line 172, ../src/main.sass */
 .slideshow {
   background-color: rgba(0, 0, 0, 0.02);
   -moz-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
@@ -316,34 +255,19 @@ h1 {
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
 }
-/* line 97, ../src/main.sass */
+/* line 101, ../src/main.sass */
 .slideshow > * {
   padding: 20px;
 }
-/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .slideshow {
-  overflow-x: hidden;
-}
 
-/* line 176, ../src/main.sass */
-footer {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
-  margin-right: 0;
-}
-/* line 147, ../../../../../../var/lib/gems/1.8/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html footer {
-  overflow-x: hidden;
-}
-
-/* line 180, ../src/main.sass */
+/* line 169, ../src/main.sass */
 .flush {
   clear: both;
+}
+
+/* line 172, ../src/main.sass */
+#main {
+  width: 50%;
+  margin-left: 25%;
 }
