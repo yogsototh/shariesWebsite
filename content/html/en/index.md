@@ -4,12 +4,12 @@ noSubMenu: true
 menupriority: 1
 -----
 <% content_for :title do %>
-    <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=436268354&mt=8">YPassword</a>
+    <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=436268354&mt=8">Get it! &raquo;</a>
 <% end %>
 
 <div id="securecontent" class="slideshow big"><div class="inner">
 YPassword use SHA1
-<img src="/Scratch//img/blog/2011-05-05-Screenshots/main_password.jpg" alt="main password view" style="display:block; margin-left:0;"/>
+<img src="/img/main/iPhone_Easy.png" class="clean" alt="main password view" />
 </div></div>
 
 <div id="easycontent" class="slideshow big"><div class="inner">

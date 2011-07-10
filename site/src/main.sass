@@ -20,7 +20,7 @@ $ycolor8: #1F2024
 $ycolor9: #0F1011
 
 // $higlightcolor:  #28C
-$higlightcolor:  $ycolor3 + #025
+$higlightcolor:  $ycolor3 + #025 - #444
 $higlightcolor-shadow:  #058
 $higlightcolor-reflect:  #6AF
 
@@ -68,6 +68,8 @@ hgroup#maintitle
       text-shadow: 0 0 2px rgba($ycolorb,.5)
     a:hover
       color: $dark_highlight
+  h2
+    font-size: .8em
   border:
     top: solid 1px #000
     bottom: solid 1px #FFF
@@ -97,7 +99,7 @@ h1,h2
   text-align: center
 
 =innerblock
-  background-color: rgba(#000,0.02)
+  background-color: $ycolorc
   +box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset)
   +border-radius()
   & > *
@@ -118,14 +120,20 @@ h1,h2
     background-color: rgba(#000,.5)
     text-shadow: 0 0 2px #000
   a
+    color: $ycolor2
+  a,span
     padding: .2em
     +border-radius(2ex)
     text-align: center
     width: 100%
     display: inline-block
-    color: $ycolor2
     &:hover
       color: $ycolorb
+  span
+    color: $ycolorb
+    text-shadow: 0 -1px 0 rgba(#000,.3), 0 1px 0 rgba(#FFF,.3)
+    background-color: rgba(#000,.15)
+    +box-shadow(rgba(#000,.3) 0 1px 3px inset,rgba(#FFF,.3) 0 1px 3px inset)  
 
 =button
   +text-shadow(rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
@@ -142,7 +150,7 @@ h1,h2
     +text-shadow(#3AF 0 0 4px, rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
 
 
-$stdWidth: 600px
+$stdWidth: 960px
 
 #prelinks
   width: $stdWidth
@@ -158,8 +166,9 @@ $stdWidth: 600px
   float: right
   +ybutton
 
+$navWidth: 600px
 #mainnav
-  width: $stdWidth
+  width: $navWidth
   padding: 0
   margin: 2.5em auto
   ul
@@ -167,21 +176,26 @@ $stdWidth: 600px
     padding: 0
     list-style-type: none
     li
-      *
       text-align: center
       float: left
-      width: ($stdWidth - 120px)/3
+      width: ($navWidth - 120px)/3
       margin: 0 20px
       +ybutton
       *
         font-size: 1.5em
-        font-weight: bold
 
 .slideshow
+  padding: 3em
+  margin: 3em
   +innerblock
 
 .flush
   clear: both
+
+.clean
+  background: none
+  border: none
+  margin: none
 
 #main
   width: $stdWidth

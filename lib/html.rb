@@ -33,18 +33,18 @@ end
 
 def page_title
     if @item[:content_for_title].nil?
-        h1text=@item[:title]
+        h2text=@item[:title]
     else
-        h1text=@item[:content_for_title]
+        h2text=@item[:content_for_title]
     end
-    tmp=%{<h1>#{h1text}</h1>}
+    tmp=%{<h1>YPassword</h1><h2>#{h2text}<h2>}
     unless @item[:subtitle].nil? and @item[:content_for_subtitle].nil?
         if @item[:content_for_subtitle].nil?
-            h2text=@item[:subtitle] 
+            h3text=@item[:subtitle] 
         else 
-            h2text=@item[:content_for_subtitle]
+            h3text=@item[:content_for_subtitle]
         end
-        tmp <<= %{<h2>#{h2text}</h2>}
+        tmp <<= %{<h3>#{h3text}</h3>}
     end
     return tmp
 end
