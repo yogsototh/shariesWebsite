@@ -6,6 +6,8 @@ $default-transition-duration: .5s
 @import compass/css3/text-shadow
 @import compass/css3/gradient
 
+$stdWidth: 960px
+
 $ycolorb: #EFEFF4
 $ycolorc: #E3E5ED
 $ycolor0: #C9CEDE
@@ -74,6 +76,19 @@ hgroup#maintitle
     top: solid 1px #000
     bottom: solid 1px #FFF
   +box-shadow(rgba(#000,.6) 0 0 15px inset)
+  +linear-gradient(color-stops($ycolor4,$ycolor5))
+
+#container>footer
+  *
+    width: $stdWidth
+    margin: 0 auto
+  a
+    color: $ycolor8
+    &:hover
+      color: $dark_highlight
+  padding: 3em 0
+  color: $ycolor9
+  text-shadow: 0 0 2px rgba($ycolorb,.5)
   +linear-gradient(color-stops($ycolor4,$ycolor5))
 
 =debug
@@ -150,7 +165,6 @@ h1,h2
     +text-shadow(#3AF 0 0 4px, rgba(#000,0.5) 0px -1px 0px,rgba(#FFF,0.5) 0px 1px 0px )
 
 
-$stdWidth: 960px
 
 #prelinks
   width: $stdWidth
@@ -208,3 +222,7 @@ $navWidth: 600px
       font-size: 2.5em
       font-weight: bold
       color: $ycolor1
+
+.center
+  margin: 0 auto
+  text-align: center
