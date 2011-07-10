@@ -306,7 +306,25 @@ h1, h2 {
   font-size: 1.5em;
 }
 
-/* line 187, ../src/main.sass */
+/* line 188, ../src/main.sass */
+.flush {
+  clear: both;
+}
+
+/* line 191, ../src/main.sass */
+.clean {
+  background: none;
+  border: none;
+  margin: none;
+}
+
+/* line 196, ../src/main.sass */
+#main {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* line 200, ../src/main.sass */
 .slideshow {
   padding: 3em;
   margin: 3em;
@@ -326,21 +344,13 @@ h1, h2 {
 .slideshow > * {
   padding: 20px;
 }
-
-/* line 192, ../src/main.sass */
-.flush {
-  clear: both;
+/* line 205, ../src/main.sass */
+.slideshow .inner img {
+  margin: 0 3em;
 }
-
-/* line 195, ../src/main.sass */
-.clean {
-  background: none;
-  border: none;
-  margin: none;
-}
-
-/* line 200, ../src/main.sass */
-#main {
-  width: 960px;
-  margin: 0 auto;
+/* line 207, ../src/main.sass */
+.slideshow .inner h3 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #b4b8c5;
 }
