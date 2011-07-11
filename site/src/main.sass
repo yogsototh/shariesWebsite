@@ -36,25 +36,23 @@ body
   margin: 0
   font-family: Futura, Molengo, sans-serif
   background: $main-background-color
-  &.bp 
-    background: $main-background-color
-    h1,h2,h3,h4,h5,h6
-      color: $ycolor4
-      font-weight: bold
-      letter-spacing: -0.05em
-      a
-        color: $ycolor2
-        &:visited
-          color: $ycolor2
-        &:hover, &:active
-          color: $higlightcolor
+  h1,h2,h3,h4,h5,h6
+    color: $ycolor4
+    font-weight: bold
+    letter-spacing: -0.05em
     a
-      text-decoration: none
-      color: $ycolor4
+      color: $ycolor2
       &:visited
-        color: $ycolor4
+        color: $ycolor2
       &:hover, &:active
         color: $higlightcolor
+  a
+    text-decoration: none
+    color: $ycolor4
+    &:visited
+      color: $ycolor4
+    &:hover, &:active
+      color: $higlightcolor
 
 // Transition for all elements
 * 
@@ -118,7 +116,7 @@ h1,h2
   +box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset)
   +border-radius()
   & > *
-    padding: 20px
+    margin: 20px
 
 .block
   +innerblock
@@ -200,7 +198,7 @@ $navWidth: 600px
 
 
 .flush
-  clear: both
+  clear: both !important
 
 .clean
   background: none
@@ -213,8 +211,21 @@ $navWidth: 600px
 
 body.std #main > article, .slideshow
   padding: 3em
-  margin: 3em
+  margin: 3em 0
   +innerblock
+
+.slideshow
+  color: $ycolor4
+  font-size: 1.3em
+  img,h3,p,ul
+    float: left
+    margin-left: 60px
+  h3,p,ul
+    width: 40%
+  h3
+    font-size: 2.0em
+    color: $ycolor2
+    text-shadow: 0 0 3px #FFF
 
 .center
   margin: 0 auto
