@@ -24,21 +24,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-  <link rel="shortcut icon" href="/Scratch/img/favicon.ico" />
+  <link rel="shortcut icon" href="/img/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
-  <!-- CSS: blueprint framework -->
-  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <link href="/css/print.css" media="print" rel="stylesheet" type="text/css" />
-  <!--[if lt IE 8]>
-    <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <![endif]-->
-
-  <!-- CSS: implied media="all" -->
   <!-- Google Fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Expletus+Sans:bold' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Kreon:regular,bold' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Molengo:regular,bold' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -49,25 +40,24 @@
 </head>
 
 <body lang="en" class="std">
-  <header>
-    <div id="choixrss"><a id="rss" href="http://feeds.feedburner.com/ypasswordespozitocomen">Subscribe</a></div>
-    <div id="choixlang"><a href="/Scratch/fr/blog/2011-05-05-Screenshots/" onclick="setLanguage('fr')">en Français</a></div>
-    <nav id="mainnav">
+    <div id="container">
+        <header>
+        <div id="prelinks">
+            <div id="choixlang"><a href="/Scratch/fr/blog/2011-05-05-Screenshots/" onclick="setLanguage('fr')">en Français</a></div>
+            <div id="choixrss"><a id="rss" href="http://feeds.feedburner.com/ypasswordespozitocomen">Subscribe</a></div>
+        </div>
+        <hgroup id="maintitle">
+        <h1>YPassword</h1><h2>Screenshots<h2>
+        </hgroup>
+        <nav id="mainnav">
         <ul>
             <ul><li><a href="/Scratch/en/">YPassword</a></li><li><a href="/Scratch/en/blog/">Blog</a></li><li><a href="/Scratch/en/support/">Support</a></li></ul>
         </ul>
-    </nav>
-  </header>
-  <div id="metacontainer">
-    <div id="container">
+        </nav>
+        </header>
 
-      <div id="main" role="main">
-        <hgroup>
-          <h1>Screenshots</h1>
-          
-        </hgroup>
-        
-        <article>
+        <div id="main" role="main">
+            <article>
             <div class="content">
                 
 <div class="intro">
@@ -110,46 +100,45 @@ Now you can paste it anywhere.</p>
 
             </div>
             <footer>
-                <ul class="article_metadata">
-                    <li>Created: <time>05/05/2011</time></li>
-                    <li>Modified: <time> 05/14/2011</time></li>
-                    <li><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Copyright ©, Yann Esposito</a></li>
-                </ul>
+            <ul class="article_metadata">
+                <li>Created: <time>05/05/2011</time></li>
+                <li>Modified: <time> 05/14/2011</time></li>
+                <li><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Copyright ©, Yann Esposito</a></li>
+            </ul>
             </footer>
-        </article>
+            </article>
 
-      </div>
-      <div id="related_articles">
-        <div id="previous_articles">
-            <h4> previous entries </h4>
-            
-          
-          
-          
         </div>
-        <div id="next_articles">
-            <h4>next entries</h4>
-        
-            
-            
-            
+        <div id="related_articles">
+            <div id="previous_articles">
+                <h4> previous entries </h4>
+                
+                
+                
+                
+            </div>
+            <div id="next_articles">
+                <h4>next entries</h4>
+                
+                
+                
+                
+            </div>
+            <div class="flush"></div>
         </div>
-        <div class="flush"></div>
-      </div>
 
+        <footer>
+        <div id="webpageinfo">
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Copyright ©, Yann Esposito</a>
+            <div>
+                Entirely done with
+                <a href="http://www.vim.org">Vim</a>
+                and 
+                <a href="http://nanoc.stoneship.org">nanoc</a>
+            </div>
+        </div>
+        </footer>
     </div> <!--! end of #container -->
-  </div> <!--! end of #metacontainer -->
-  <footer>
-    <div id="webpageinfo">
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Copyright ©, Yann Esposito</a>
-        <div>
-            Entirely done with
-            <a href="http://www.vim.org">Vim</a>
-            and 
-            <a href="http://nanoc.stoneship.org">nanoc</a>
-        </div>
-    </div>
-  </footer>
 
 
   <!-- JavaScript at the bottom for fast page loading -->

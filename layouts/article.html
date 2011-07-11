@@ -24,21 +24,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-  <link rel="shortcut icon" href="<%=@config[:webprefix]%>/img/favicon.ico" />
+  <link rel="shortcut icon" href="/img/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
-  <!-- CSS: blueprint framework -->
-  <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <link href="/css/print.css" media="print" rel="stylesheet" type="text/css" />
-  <!--[if lt IE 8]>
-    <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-  <![endif]-->
-
-  <!-- CSS: implied media="all" -->
   <!-- Google Fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Expletus+Sans:bold' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Kreon:regular,bold' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Molengo:regular,bold' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -49,85 +40,79 @@
 </head>
 
 <body lang="<%= language %>" class="<%=bodyclass%>">
-  <header>
-    <div id="choixrss"><%= choixrss %></div>
-    <div id="choixlang"><%= choixlang %></div>
-    <nav id="mainnav">
+    <div id="container">
+        <header>
+        <div id="prelinks">
+            <div id="choixlang"><%= choixlang %></div>
+            <div id="choixrss"><%= choixrss %></div>
+        </div>
+        <hgroup id="maintitle">
+        <%= page_title %>
+        </hgroup>
+        <nav id="mainnav">
         <ul>
             <%= generateMenu %>
         </ul>
-    </nav>
-  </header>
-  <div id="metacontainer">
-    <div id="container">
+        </nav>
+        </header>
 
-      <div id="main" role="main">
-        <hgroup>
-          <h1><%= @item[:content_for_title].nil? ? @item[:title] : @item[:content_for_title] %></h1>
-          <% unless @item[:subtitle].nil? and @item[:content_for_subtitle].nil? %> 
-          <h2>
-          <%= @item[:content_for_subtitle].nil? ? @item[:subtitle] : @item[:content_for_subtitle] %>
-          </h2>
-          <% end %>
-        </hgroup>
-        
-        <article>
+        <div id="main" role="main">
+            <article>
             <div class="content">
                 <%= yield %>
             </div>
             <footer>
-                <ul class="article_metadata">
-                    <li><%=tradOf(:created_at)%>: <time><%= @item[:created_at].strftime(@config[:dateFormat][language.intern]) %></time></li>
-                    <li><%=tradOf(:last_modified)%>: <time> <%= gitmtime.strftime(@config[:dateFormat][language.intern]) %></time></li>
-                    <li><%=tradOf(:copyright) %></li>
-                </ul>
+            <ul class="article_metadata">
+                <li><%=tradOf(:created_at)%>: <time><%= @item[:created_at].strftime(@config[:dateFormat][language.intern]) %></time></li>
+                <li><%=tradOf(:last_modified)%>: <time> <%= gitmtime.strftime(@config[:dateFormat][language.intern]) %></time></li>
+                <li><%=tradOf(:copyright) %></li>
+            </ul>
             </footer>
-        </article>
+            </article>
 
-      </div>
-      <div id="related_articles">
-        <div id="previous_articles">
-            <h4> <%= tradOf(:previousArticles) %> </h4>
-            <% 
-               (1..3).each do |n|
-               a=article_brother(-n)
-               if not a.nil?
-           %>
-            <div class="previous_article">
-              <%= link_to( %{<span class="nicer">«</span>&nbsp;}+ a[:title], a)  %>
-            </div>
-            <% end %>
-          <% end %>
         </div>
-        <div id="next_articles">
-            <h4><%= tradOf(:nextArticles) %></h4>
-        <% 
-           (1..3).each do |n|
-              a=article_brother(n)
-              if not a.nil?
-        %>
+        <div id="related_articles">
+            <div id="previous_articles">
+                <h4> <%= tradOf(:previousArticles) %> </h4>
+                <% 
+                (1..3).each do |n|
+                a=article_brother(-n)
+                if not a.nil?
+                %>
+                <div class="previous_article">
+                    <%= link_to( %{<span class="nicer">«</span>&nbsp;}+ a[:title], a)  %>
+                </div>
+                <% end %>
+                <% end %>
+            </div>
+            <div id="next_articles">
+                <h4><%= tradOf(:nextArticles) %></h4>
+                <% 
+                (1..3).each do |n|
+                a=article_brother(n)
+                if not a.nil?
+                %>
                 <div class="next_article">
                     <%= link_to(a[:title] + %{&nbsp;<span class="nicer">»</span>}, a)  %>
                 </div>
                 <% end %>
-            <% end %>
+                <% end %>
+            </div>
+            <div class="flush"></div>
         </div>
-        <div class="flush"></div>
-      </div>
 
-    </div> <!--! end of #container -->
-  </div> <!--! end of #metacontainer -->
-  <footer>
-    <div id="webpageinfo">
-        <%=tradOf(:copyright) %>
-        <div>
-            <%= tradOf(:entirely_done_with) %>
-            <a href="http://www.vim.org">Vim</a>
-            <%= tradOf(:and) %> 
-            <a href="http://nanoc.stoneship.org">nanoc</a>
+        <footer>
+        <div id="webpageinfo">
+            <%=tradOf(:copyright) %>
+            <div>
+                <%= tradOf(:entirely_done_with) %>
+                <a href="http://www.vim.org">Vim</a>
+                <%= tradOf(:and) %> 
+                <a href="http://nanoc.stoneship.org">nanoc</a>
+            </div>
         </div>
-    </div>
-  </footer>
+        </footer>
+    </div> <!--! end of #container -->
 
 
   <!-- JavaScript at the bottom for fast page loading -->

@@ -406,21 +406,45 @@ body.std #main > article > *, .slideshow > * {
 }
 
 /* line 243, ../src/main.sass */
+img.left {
+  float: left;
+  padding: 10px;
+  max-width: 10em;
+  background-color: #e3e5ed;
+  -moz-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
+  -webkit-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
+  -o-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
+  box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 1em;
+  background: rgba(239, 239, 244, 0.2);
+}
+/* line 122, ../src/main.sass */
+img.left > * {
+  margin: 20px;
+}
+
+/* line 251, ../src/main.sass */
 ul.article_metadata {
   list-style-type: none;
   text-align: right;
   color: #b4b8c5;
 }
-/* line 247, ../src/main.sass */
+/* line 255, ../src/main.sass */
 ul.article_metadata a {
   color: #9ca1ad;
 }
-/* line 249, ../src/main.sass */
+/* line 257, ../src/main.sass */
 ul.article_metadata a:hover {
   color: #315896;
 }
 
-/* line 252, ../src/main.sass */
+/* line 260, ../src/main.sass */
 #tagcloud {
   background: #efeff4;
   padding: 2em;
@@ -438,12 +462,12 @@ ul.article_metadata a:hover {
   margin: 0 auto;
 }
 
-/* line 260, ../src/main.sass */
+/* line 268, ../src/main.sass */
 #elementblock {
   width: 600px;
   margin: 0 auto 4em auto;
 }
-/* line 263, ../src/main.sass */
+/* line 271, ../src/main.sass */
 #elementblock ul.menu {
   background-color: #efeff4;
   -moz-box-shadow: white 0 0 3px, rgba(0, 0, 0, 0.2) 0 0 3px inset;
@@ -460,7 +484,7 @@ ul.article_metadata a:hover {
   padding: 10px;
   list-style-type: none;
 }
-/* line 270, ../src/main.sass */
+/* line 278, ../src/main.sass */
 #elementblock ul.menu li {
   display: inline-block;
   text-align: center;
@@ -512,4 +536,21 @@ ul.article_metadata a:hover {
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
   -o-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
+}
+
+/* line 285, ../src/main.sass */
+#related_articles {
+  width: 960px;
+  margin: 3em auto;
+}
+/* line 288, ../src/main.sass */
+#related_articles #previous_articles {
+  float: left;
+  width: 40%;
+}
+/* line 291, ../src/main.sass */
+#related_articles #next_articles {
+  float: right;
+  text-align: right;
+  width: 40%;
 }

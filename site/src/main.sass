@@ -240,6 +240,14 @@ body.std #main > article, .slideshow
 .rightimage
   float: right
 
+img.left
+  float: left
+  padding: 10px
+  max-width: 10em
+  +innerblock
+  margin: 0 1em
+  background: rgba($ycolorb,.2)
+
 ul.article_metadata
   list-style-type: none
   text-align: right
@@ -273,3 +281,14 @@ ul.article_metadata
       width: ($navWidth - 150px)/3
       margin: 0 20px
       +ybutton
+
+#related_articles
+  width: $stdWidth
+  margin: 3em auto
+  #previous_articles
+    float: left
+    width: 40%
+  #next_articles
+    float: right
+    text-align: right
+    width: 40%
