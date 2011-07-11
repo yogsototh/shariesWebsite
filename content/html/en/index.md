@@ -6,6 +6,7 @@ menupriority: 1
 <% content_for :title do %>
     <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=436268354&mt=8">Get it! &raquo;</a>
 <% end %>
+<% content_for :bodyclass do %>clear<% end %>
 
 <div id="secure" class="slideshow">
     <img src="/img/main/iPhone pw.jpg" class="clean" alt="Main Password View" class="leftimage" />

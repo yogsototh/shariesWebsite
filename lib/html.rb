@@ -31,6 +31,14 @@ def choixlang
     end.join()
 end
 
+def bodyclass
+    if @item[:content_for_bodyclass].nil?
+        "std"
+    else
+        @item[:content_for_bodyclass]
+    end
+end
+
 def page_title
     if @item[:content_for_title].nil?
         h2text=@item[:title]
@@ -52,3 +60,4 @@ end
 def last_modified_tag
     return %{#{tradOf(:last_modified)}: <time>#{gitmtime.strftime(@config[:dateFormat][@conf.language.intern])}</time>}
 end
+

@@ -142,7 +142,7 @@ module Nanoc3::Filters
         identifiers :multicorps
         def run(content, params={})
             content.gsub(/^.*newcorps.*$/) do
-                %{\n</div>\n\n<div class="corps">\n}
+                %{\n</article>\n\n<article>\n}
             end.gsub(/^.*begindiv\((.*)\).*$/) do
                 %{\n<div class="#{$1}">\n}
             end.gsub(/^.*enddiv.*$/) do
