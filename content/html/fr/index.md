@@ -9,7 +9,7 @@ menupriority: 1
 <% content_for :bodyclass do %>clear<% end %>
 
 <div id="secure" class="slideshow">
-    <img src="/img/main/iPhone pw.jpg" class="clean" alt="Main Password View" class="leftimage" />
+    <img src="/img/main/iPhone_pw.jpg" class="clean" alt="Main Password View" class="leftimage" />
     <h3>Secure</h3>
     <p>YPassword use SHA1</p>
     <div class="flush"></div>

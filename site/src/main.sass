@@ -27,6 +27,7 @@ $higlightcolor-shadow:  #058
 $higlightcolor-reflect:  #6AF
 
 $dark_highlight: #025
+$light_highlight: $ycolor3 - #530
 
 $main-background-color: $ycolorb
 
@@ -245,3 +246,30 @@ ul.article_metadata
   color: $ycolor1
   a
     color: $ycolor2
+    &:hover
+      color: $light_highlight
+
+#tagcloud
+  background: $ycolorb
+  padding: 2em
+  +border-radius(5px)
+  +box-shadow(0 0 3px #333 inset, 0 0 3px #FFF)
+  width: 70%
+  margin: 0 auto
+
+#elementblock
+  width: $navWidth
+  margin: 0 auto 4em auto
+  ul.menu
+    background-color: $ycolorb
+    +box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset)
+    +border-radius(2.3ex)
+    margin: 0
+    padding: 10px
+    list-style-type: none
+    li
+      display: inline-block
+      text-align: center
+      width: ($navWidth - 150px)/3
+      margin: 0 20px
+      +ybutton
