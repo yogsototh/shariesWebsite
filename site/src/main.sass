@@ -76,6 +76,9 @@ hgroup#maintitle
   +box-shadow(rgba(#000,.6) 0 0 15px inset)
   +linear-gradient(color-stops($ycolor4,$ycolor5))
 
+footer
+  clear:both
+
 #container>footer
   *
     width: $stdWidth
@@ -217,7 +220,7 @@ body.std #main > article, .slideshow
 .slideshow
   color: $ycolor4
   font-size: 1.3em
-  img,h3,p,ul
+  h3,p,ul
     float: left
     margin-left: 60px
   h3,p,ul
@@ -230,3 +233,15 @@ body.std #main > article, .slideshow
 .center
   margin: 0 auto
   text-align: center
+
+.leftimage
+  float: left
+.rightimage
+  float: right
+
+ul.article_metadata
+  list-style-type: none
+  text-align: right
+  color: $ycolor1
+  a
+    color: $ycolor2

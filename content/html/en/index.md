@@ -26,6 +26,7 @@ menupriority: 1
 </div>
 
 <div id="portable" class="slideshow">
+    <h3>Portable</h3>
     <p>You can use YPassword on: </p>
     <ul>
         <li> iPhone, </li>
