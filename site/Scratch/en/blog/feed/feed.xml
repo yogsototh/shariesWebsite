@@ -3,8 +3,8 @@
   <id>http://ypassword.espozito.com/</id>
   <title>Yogsototh's last blogs entries</title>
   <updated>2011-05-05T09:27:11Z</updated>
-  <link href="http://ypassword.espozito.com/" rel="alternate"/>
-  <link href="http://feeds.feedburner.com/yannespositocomen" rel="self"/>
+  <link rel="alternate" href="http://ypassword.espozito.com/"/>
+  <link rel="self" href="http://feeds.feedburner.com/yannespositocomen"/>
   <author>
     <name>Yann Esposito</name>
     <uri>http://yannesposito.com</uri>
@@ -14,7 +14,11 @@
     <title type="html">Screenshots</title>
     <published>2011-05-05T09:27:11Z</published>
     <updated>2011-05-05T09:27:11Z</updated>
-    <link href="http://ypassword.espozito.com/Scratch/en/blog/2011-05-05-Screenshots/" rel="alternate"/>
+    <author>
+      <name>Yann Esposito</name>
+      <uri>yannesposito.com</uri>
+    </author>
+    <link rel="alternate" href="http://ypassword.espozito.com/Scratch/en/blog/2011-05-05-Screenshots/"/>
     <content type="html">
 &lt;div class="intro"&gt;
 
