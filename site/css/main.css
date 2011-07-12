@@ -609,8 +609,13 @@ article article, .archive {
 article article > *, .archive > * {
   margin: 20px;
 }
+/* line 318, ../src/main.sass */
+article article .content, .archive .content {
+  width: 600px;
+  margin: 0 auto;
+}
 
-/* line 319, ../src/main.sass */
+/* line 322, ../src/main.sass */
 #hiddenDivs {
   width: 600px;
   margin: 1em auto;
@@ -633,7 +638,7 @@ article article > *, .archive > * {
   margin: 20px;
 }
 
-/* line 327, ../src/main.sass */
+/* line 330, ../src/main.sass */
 .archive .button {
   font-size: 14px;
   width: 5em;
@@ -684,28 +689,28 @@ article article > *, .archive > * {
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px inset, rgba(255, 255, 255, 0.3) 0 1px 3px inset;
 }
 
-/* line 331, ../src/main.sass */
+/* line 334, ../src/main.sass */
 .return {
   float: right;
   opacity: 0.3;
 }
-/* line 334, ../src/main.sass */
+/* line 337, ../src/main.sass */
 .return:hover {
   opacity: 1;
 }
 
-/* line 337, ../src/main.sass */
+/* line 340, ../src/main.sass */
 .big {
   font-size: 1.2em;
 }
 
-/* line 340, ../src/main.sass */
+/* line 343, ../src/main.sass */
 body.support #main > article {
   width: 600px;
   margin: 3em auto;
   font-size: 1.2em;
 }
-/* line 344, ../src/main.sass */
+/* line 347, ../src/main.sass */
 body.support #main > article form {
   margin: 1em;
 }

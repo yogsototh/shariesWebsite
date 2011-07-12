@@ -17,7 +17,7 @@ noSubMenu: true
 <% end %>
 <% 
     number_of_articles=5
-    number_of_char_for_resume=800
+    number_of_char_for_resume=400
     language=@item_rep.path.sub(/\/Scratch\//,'').sub(/\/.*$/,'') 
     last_articles = @items.select do |a| 
             a.reps[0].path =~ /\/#{language}\//  && a[:kind] == 'article'
@@ -44,7 +44,7 @@ Last <%= number_of_articles %> Articles
     <h1> <%= link_to(a[:title]+%{ <span class="nicer">»</span>}, a) %> </h1>
 
     <div class="content">
-        <%= repair_html ( excerptize( a.reps[0].compiled_content, {:length => number_of_char_for_resume} ) ) %>
+        <%= repair_html ( excerptize( a.reps[0].compiled_content, {:length => number_of_char_for_resume} ).gsub(/<img[^>]*(\/|><\/img)>/,"") ) %>
     
         <div class="flush"></div>
         <div>
@@ -64,6 +64,8 @@ Last <%= number_of_articles %> Articles
     <%= tagCloud %>
     </div>
 </div>
+
+<hr/>
 
 <h2 id="archives">Archives</h2>
 
