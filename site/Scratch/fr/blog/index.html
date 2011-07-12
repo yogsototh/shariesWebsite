@@ -131,7 +131,7 @@ Les 5 derniers articles
                 $('#tag_'+id).addClass('selected');
             }
         </script><div id="tagcloud"><a href="#images" style="font-size: 1.0em;" class="tag" onclick="tagSelected('images')" id="tag_images">images</a> </div><div id="hiddenDivs" ><div id="images" class="list"><h4>images</h4><ul style="list-style-type: none; margin: 0;">
-                    <li style="line-height: 3em; margin: 0;">
+                    <li>
                         <span class="date">
         <span class="day">5</span>
         <span class="month">Mai</span>
@@ -145,7 +145,7 @@ Les 5 derniers articles
 
 <h2 id="archives">Archives</h2>
 
-<div id="sousliens" class="archive"><h4 class="button" onclick="$('#archives_2011').slideToggle()">[2011]</h4><ul id="archives_2011"><li><span class="date">
+<div id="sousliens" class="archive"><h4 class="button"><a onclick="$('#archives_2011').slideToggle();return false;" href="#">[2011]</a></h4><ul id="archives_2011"><li><span class="date">
         <span class="day">5</span>
         <span class="month">Mai</span>
         <span class="year">2011</span>
@@ -163,11 +163,15 @@ Les 5 derniers articles
       <div id="webpageinfo">
           <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr">Droits de reproduction ©, Yann Esposito</a>
           <div>
+              Designed by <a href="htt://yannesposito.com">Yann Esposito</a>
+          </div>
+          <div>
               Site entièrement réalisé avec
-              <a href="http://www.vim.org">Vim</a>
+              <a href="http://www.vim.org">vim</a>,
+              <a href="http://nanoc.stoneship.org">nanoc</a>,
+              <a href="http://compass-style.org">compass</a>
               et 
-              <a href="http://nanoc.stoneship.org">nanoc</a>
-              <!-- TODO: add compass, blueprint -->
+              <a href="http://html5boilerplate">html5boilerplate</a>
           </div>
       </div>
     </footer>

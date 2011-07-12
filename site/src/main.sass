@@ -78,6 +78,7 @@ hgroup#maintitle
   +linear-gradient(color-stops($ycolor4,$ycolor5))
 
 footer
+  font-size: .8em
   clear:both
 
 #container>footer
@@ -259,11 +260,12 @@ ul.article_metadata
 
 #tagcloud
   background: $ycolorb
-  padding: 2em
-  +border-radius(5px)
-  +box-shadow(0 0 3px #333 inset, 0 0 3px #FFF)
-  width: 70%
-  margin: 0 auto
+  +innerblock
+  padding: 1em
+  width: $navWidth
+  margin: 1em auto
+  a:hover
+    cursor: pointer
 
 #elementblock
   width: $navWidth
@@ -292,3 +294,33 @@ ul.article_metadata
     float: right
     text-align: right
     width: 40%
+
+.date
+  font-size: .8em
+  line-height: 2em
+  float: left
+  color: $ycolor2
+  margin-right: 1em
+
+article article, .archive
+  +innerblock
+  background-color: $ycolorb
+  padding: 1em
+
+#hiddenDivs
+  width: $navWidth
+  margin: 1em auto
+  +innerblock
+  background-color: $ycolorb
+  padding: 1em
+
+.archive
+  .button
+    +ybutton
+    width: 5em
+
+.return
+  float: right
+  opacity: .3
+  &:hover
+    opacity: 1

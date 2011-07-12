@@ -99,7 +99,7 @@
             tagCloud <<= %{<div id="#{protected}" class="list"><h4>#{t}</h4><ul style="list-style-type: none; margin: 0;">}
             l.sort{|x,y| y[:created_at] <=> x[:created_at]}.each do |p|
                 tagCloud <<= %{
-                    <li style="line-height: 3em; margin: 0;">
+                    <li>
                         #{calendar_for(p[:created_at], language)}
                         <a href="#{p.path}">#{p[:title]} <span class="nicer">»</span></a>
                     </li>\n}
