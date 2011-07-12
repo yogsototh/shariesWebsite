@@ -65,7 +65,6 @@
             <ul class="article_metadata">
                 <li><%=tradOf(:created_at)%>: <time><%= @item[:created_at].strftime(@config[:dateFormat][language.intern]) %></time></li>
                 <li><%=tradOf(:last_modified)%>: <time> <%= gitmtime.strftime(@config[:dateFormat][language.intern]) %></time></li>
-                <li><%=tradOf(:copyright) %></li>
             </ul>
             </footer>
             </article>
