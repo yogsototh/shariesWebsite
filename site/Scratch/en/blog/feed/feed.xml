@@ -29,19 +29,21 @@
 
 &lt;p&gt;&lt;img alt="Entry screen" src="/Scratch/img/blog/2011-05-05-Screenshots/entry_screen.jpg" class="left" /&gt;&lt;/p&gt;
 
-&lt;div class="flush"&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
 &lt;p&gt;&lt;img alt="main view" src="/Scratch/img/blog/2011-05-05-Screenshots/main_view.jpg" class="left" /&gt;&lt;/p&gt;
 
-&lt;p class="big"&gt;If you tap, the light glow and this means your password is copied.
-Now you can paste it anywhere.&lt;/p&gt;
+&lt;ul class="big"&gt;
+  &lt;li&gt;Tap &lt;em&gt;login&lt;/em&gt; or &lt;em&gt;password&lt;/em&gt;, &lt;/li&gt;
+  &lt;li&gt;The light glow, the field is copied,&lt;/li&gt;
+  &lt;li&gt;Paste it in any other application.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p class="big"&gt;If you tab &amp;ldquo;Go to website&amp;rdquo;, you are sent to the website and your password is copied for you.&lt;/p&gt;
+&lt;ul class="big"&gt;
+  &lt;li&gt;Tap &lt;em&gt;&amp;ldquo;Go to website&amp;rdquo;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;You are sent to the website &lt;em&gt;&amp;amp;&lt;/em&gt; your password is copied for you.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;div class="flush"&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/hr&gt;&lt;/p&gt;</content>
+&lt;p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;</content>
   </entry>
 </feed>

@@ -19,24 +19,26 @@
 &lt;div class="intro"&gt;
 
 
-&lt;p&gt;&lt;span class="sc"&gt;&lt;abbr title="Trop long &#224; lire"&gt;tl&#224;l&lt;/abbr&gt;&amp;nbsp;: &lt;/span&gt; Des captures d&amp;rsquo;&#233;crans.&lt;/p&gt;
+&lt;p&gt;&lt;span class="sc"&gt;&lt;abbr title="Trop long &#195;&#160; lire"&gt;tl&#195;&#160;l&lt;/abbr&gt;&amp;nbsp;: &lt;/span&gt; Des captures d&amp;rsquo;&#195;&#169;crans.&lt;/p&gt;
 
 
 &lt;/div&gt;
 
 
-&lt;p&gt;Ceci est une suite de quelques captures d&amp;rsquo;&#233;cran d&amp;rsquo;YPassword.&lt;/p&gt;
+&lt;p&gt;Ceci est une suite de quelques captures d&amp;rsquo;&#195;&#169;cran d&amp;rsquo;YPassword.&lt;/p&gt;
 
 &lt;p&gt;&lt;img alt="Entry screen" src="/Scratch/img/blog/2011-05-05-Screenshots/entry_screen.jpg" class="left" /&gt;&lt;/p&gt;
 
-&lt;div class="flush"&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
 &lt;p&gt;&lt;img alt="main view" src="/Scratch/img/blog/2011-05-05-Screenshots/main_view.jpg" class="left" /&gt;&lt;/p&gt;
 
-&lt;p class="big"&gt;Lorsque vous tapez le mot de passe ou votre nom de login la lumi&#232;re pulse. Votre mot de passe est copi&#233;, pr&#234;t &#224; &#234;tre coll&#233; n&amp;rsquo;importe o&#249;.&lt;/p&gt;
+&lt;ul class="big"&gt;
+  &lt;li&gt;Tapez sur le login ou le mot de passe&amp;nbsp;;&lt;/li&gt;
+  &lt;li&gt;La lumi&#195;&#168;re &amp;ldquo;pulse&amp;rdquo;&amp;nbsp;; &lt;/li&gt;
+  &lt;li&gt;Votre mot de passe est copi&#195;&#169;, pr&#195;&#170;t &#195;&#160; &#195;&#170;tre coll&#195;&#169; dans une autre application.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p class="big"&gt;Si vous appuyez sur le bouton &amp;ldquo;go to website&amp;rdquo; vous allez sur le site web. fr: Le mot de passe est copi&#233; pour vous.&lt;/p&gt;&lt;/p&gt;&lt;/hr&gt;&lt;/p&gt;</content>
+&lt;ul class="big"&gt;
+  &lt;li&gt;Tappez sur &amp;ldquo;go to website&amp;rdquo; &lt;/li&gt;
+  &lt;li&gt;Vous allez sur le site web et votre mot de passe a &#195;...&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/p&gt;</content>
   </entry>
 </feed>

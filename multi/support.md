@@ -5,7 +5,9 @@ noSubMenu: false
 no_entete: true
 menupriority: 4
 ---
-A problem? A remark? 
+<% content_for :bodyclass do %>std support<% end %>
+
+## A problem? A remark? 
 
 <form name="email" id="email" action="/contact" method="post">
 <input type="text" name="name" value="Your name" onfocus="this.value=''" style="display: block;width=20em"/>

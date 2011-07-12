@@ -7,6 +7,7 @@ $default-transition-duration: .5s
 @import compass/css3/gradient
 
 $stdWidth: 960px
+$navWidth: 600px
 
 $ycolorb: #EFEFF4
 $ycolorc: #E3E5ED
@@ -34,9 +35,18 @@ $main-background-color: $ycolorb
 
 // Background colors
 body
+  color: $ycolor6
   margin: 0
   font-family: Futura, Molengo, sans-serif
   background: $main-background-color
+  hr
+    clear: both
+    color: $ycolor1
+    background: $ycolor1
+    border: none
+    border-bottom: 1px solid $ycolorb
+    width: $navWidth/2
+    margin: 2em auto
   h1,h2,h3,h4,h5,h6
     color: $ycolor4
     font-weight: bold
@@ -183,7 +193,6 @@ h1,h2
   float: right
   +ybutton
 
-$navWidth: 600px
 #mainnav
   width: $navWidth
   padding: 0
@@ -246,8 +255,8 @@ img.left
   padding: 10px
   max-width: 10em
   +innerblock
-  margin: 0 1em
-  background: rgba($ycolorb,.2)
+  margin: 0 2em
+  background: $ycolorb
 
 ul.article_metadata
   list-style-type: none
@@ -324,3 +333,13 @@ article article, .archive
   opacity: .3
   &:hover
     opacity: 1
+
+.big
+  font-size: 1.2em
+
+body.support #main > article
+  width: $navWidth
+  margin: 3em auto
+  font-size: 1.2em
+  form
+    margin: 1em

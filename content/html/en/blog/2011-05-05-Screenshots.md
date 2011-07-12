@@ -15,37 +15,29 @@ begindiv(intro)
 
 <%= tldr %> Some screenshots
 
-
 enddiv
 
 Here are some screenshots of YPassword.
 
 <%= leftblogimage("entry_screen.jpg","Entry screen") %>
 
-<div class="flush"></div>
-
-<hr/>
-
 <%= leftblogimage("main_view.jpg","main view") %>
 
-If you tap, the light glow and this means your password is copied.
-Now you can paste it anywhere.
+- Tap _login_ or _password_, 
+- The light glow, the field is copied,
+- Paste it in any other application.
 {: .big}
 
-If you tab "Go to website", you are sent to the website and your password is copied for you.
+- Tap _"Go to website"_
+- You are sent to the website _&_ your password is copied for you.
 {: .big}
+
 
 
 <div class="flush"></div>
 
 <%= leftblogimage("list_view.jpg","list view") %>
-
-<hr/>
-
 <%= leftblogimage("main_password.jpg","main password") %>
-
-<hr/>
-
 <%= leftblogimage("add_website.jpg","add website view") %>
 
 <div class="flush"></div>

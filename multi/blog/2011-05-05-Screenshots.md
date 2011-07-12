@@ -15,45 +15,39 @@ en:   - screenshot
 begindiv(intro)
 
 en: <%= tldr %> Some screenshots
-
 fr: <%= tlal %> Des captures d'écrans.
 
 enddiv
 
-fr: Ceci est une suite de quelques captures d'écran d'YPassword.
 en: Here are some screenshots of YPassword.
+fr: Ceci est une suite de quelques captures d'écran d'YPassword.
 
 <%= leftblogimage("entry_screen.jpg","Entry screen") %>
 
-<div class="flush"></div>
-
-<hr/>
-
 <%= leftblogimage("main_view.jpg","main view") %>
 
-en: If you tap, the light glow and this means your password is copied.
-en: Now you can paste it anywhere.
-en: {: .big}
-en: 
-en: If you tab "Go to website", you are sent to the website and your password is copied for you.
+en: - Tap _login_ or _password_, 
+en: - The light glow, the field is copied,
+en: - Paste it in any other application.
 en: {: .big}
 
-fr: Lorsque vous tapez le mot de passe ou votre nom de login la lumière pulse. Votre mot de passe est copié, prêt à être collé n'importe où.
+en: - Tap _"Go to website"_
+en: - You are sent to the website _&_ your password is copied for you.
+en: {: .big}
+
+fr: - Tapez sur le login ou le mot de passe ;
+fr: - La lumière "pulse" ; 
+fr: - Votre mot de passe est copié, prêt à être collé dans une autre application.
 fr: {: .big}
-fr: 
-fr: Si vous appuyez sur le bouton "go to website" vous allez sur le site web. fr: Le mot de passe est copié pour vous.
+
+fr: - Tappez sur "go to website" 
+fr: - Vous allez sur le site web et votre mot de passe a été copié.
 fr: {: .big}
 
 <div class="flush"></div>
 
 <%= leftblogimage("list_view.jpg","list view") %>
-
-<hr/>
-
 <%= leftblogimage("main_password.jpg","main password") %>
-
-<hr/>
-
 <%= leftblogimage("add_website.jpg","add website view") %>
 
 <div class="flush"></div>
