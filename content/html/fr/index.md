@@ -3,10 +3,29 @@ title: YPassword
 noSubMenu: true
 menupriority: 1
 -----
+<% 
+def itunesurl
+    "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=436268354&mt=8" 
+end
+%>
 <% content_for :title do %>
-    <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=436268354&mt=8">Get it! &raquo;</a>
+    <a href="<%=itunesurl%>">Get it! &raquo;</a>
 <% end %>
 <% content_for :bodyclass do %>clear<% end %>
+
+<div id="helloblock">
+    <div id="logo">
+        <img src="/img/main/Logo.png"/></div>
+    <div id="blocktitle">Easy, Secure &amp; Portable Password Manager</div>
+    <div id="blocktext">
+        <p> One different password for each website.  <br/>
+            If some are compromised, there is not way to find another one.<br/>
+            You only have to remember one password.</p></div>
+     <div id="getit">
+        <a href="<%=itunesurl%>">
+            <img src="/img/main/GetIt.png"/></a></div>
+     <div class="flush"></div>
+</div>
 
 <div id="easy" class="slideshow">
     <img src="/img/main/iPhone_Easy.png" alt="main view" class="rightimage" />
