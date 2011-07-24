@@ -755,3 +755,17 @@ body.support #main > article form {
 #helloblock #getit {
   float: right;
 }
+
+/* line 369, ../src/main.sass */
+iframe {
+  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0 0 15px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 0 15px;
+  -o-box-shadow: rgba(0, 0, 0, 0.6) 0 0 15px;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 0 15px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
