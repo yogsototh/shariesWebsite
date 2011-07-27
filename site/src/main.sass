@@ -231,16 +231,12 @@ body.std #main > article, .slideshow
 
 .slideshow
   color: $ycolor4
-  font-size: 1.3em
-  h3,p,ul
-    float: left
-    margin-left: 60px
-  h3,p,ul
-    width: 40%
+  font-size: 1.2em
   h3
     font-size: 2.0em
     color: $ycolor2
     text-shadow: 0 0 3px #FFF
+    margin-bottom: 2em
 
 .center
   margin: 0 auto
@@ -284,14 +280,14 @@ ul.article_metadata
     background-color: $ycolorb
     +box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset)
     +border-radius(2.3ex)
-    margin: 0
+    margin: 0 auto
     padding: 0
     list-style-type: none
     li
       display: inline-block
       text-align: center
-      width: $navWidth / 4
-      margin: 0
+      width: ($navWidth / 4)
+      margin: 0 $navWidth/24
       +ybutton
 
 #related_articles
