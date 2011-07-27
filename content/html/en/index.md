@@ -22,8 +22,7 @@ end
             If some are compromised, there is not way to find another one.<br/>
             You only have to remember one password.</p></div>
      <div id="getit">
-        <a href="<%=itunesurl%>">
-            <img src="/img/main/GetIt.png"/></a></div>
+        <a href="<%=itunesurl%>"><img src="/img/main/GetIt.png"/></a></div>
      <div class="flush"></div>
 </div>
 
