@@ -365,3 +365,30 @@ body.support #main > article
 iframe
   +box-shadow(rgba(#000,.6) 0 0 15px)
   +border-radius()
+
+input[type=text], textarea
+  +box-shadow($ycolor3 0 0 3px inset, $ycolorb 0 0 3px)
+  +border-radius()
+  border: solid 1px $ycolor3
+  color: $ycolor4
+  background: $ycolorb
+  padding: 1ex
+  margin: 1em 0
+
+input[type=submit],.bluebutton
+  display: block
+  text-align: center
+  padding: 1ex 3ex
+  margin: 1em 0
+  +box-shadow($ycolor3 0 0 3px, $ycolorb 2px 0)
+  +border-radius()
+  text-shadow: 0 -1px $ycolor7
+  border: solid 1px $higlightcolor-reflect
+  color: $ycolorb !important
+  font-weight: bold
+  background: $higlightcolor
+  &:hover
+    color: $ycolorb
+    text-shadow: 0 0 1px $higlightcolor-shadow
+    cursor: pointer
+    background: $higlightcolor + #111
