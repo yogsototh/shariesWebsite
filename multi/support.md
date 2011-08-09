@@ -6,13 +6,28 @@ no_entete: true
 menupriority: 4
 ---
 <% content_for :bodyclass do %>std support<% end %>
+<% content_for :js do %>
+    <script>
+        $.fn.clearOnFocus = function() {
+            return this.focus(function(){
+                var v = $(this).val();
+                $(this).val( v === this.defaultValue ? '' : v );
+            }).blur(function(){
+                var v = $(this).val();
+                $(this).val( v.match(/^\s*$/) ? this.defaultValue : v );
+            });
+        };
+        $('input[type=text]').clearOnFocus();
+        $('textarea').clearOnFocus();
+    </script>
+<% end %>
 
 ## A problem? A remark? 
 
 <form name="email" id="email" action="/contact" method="post">
-<input type="text" name="name" value="Your name" onfocus="this.value=''" style="display: block;width=20em"/>
-<input type="text" name="mail" value="Your email"  onfocus="this.value=''" style="display: block; width=20em"/>
-<textarea name="body" id="bodytextarea" value=""  onfocus="this.value=''" style="display: block; height: 10em; width: 30em;">Enter your comment here</textarea>
+<input type="text" name="name" value="Your Name"/>
+<input type="text" name="mail" value="Your email"/>
+<textarea name="body" id="bodytextarea" value="">Enter your comment here</textarea>
 <input type="submit" value="Send"/>
 </form>
 

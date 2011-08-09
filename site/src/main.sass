@@ -366,7 +366,12 @@ iframe
   +box-shadow(rgba(#000,.6) 0 0 15px)
   +border-radius()
 
+$inputWidth: 28em
+
 input[type=text], textarea
+  display: block
+  width: $inputWidth
+  font-size: .9em
   +box-shadow($ycolor3 0 0 3px inset, $ycolorb 0 0 3px)
   +border-radius()
   border: solid 1px $ycolor3
@@ -374,16 +379,19 @@ input[type=text], textarea
   background: $ycolorb
   padding: 1ex
   margin: 1em 0
+textarea
+  height: $inputWidth/1.618
 
 input[type=submit],.bluebutton
   display: block
   text-align: center
+  font-size: .9em
   padding: 1ex 3ex
-  margin: 1em 0
-  +box-shadow($ycolor3 0 0 3px, $ycolorb 2px 0)
+  margin: .5em 0
+  +box-shadow($higlightcolor-reflect 0 1px 2px inset, $ycolorb 2px 0)
   +border-radius()
   text-shadow: 0 -1px $ycolor7
-  border: solid 1px $higlightcolor-reflect
+  border: solid 3px $ycolor7
   color: $ycolorb !important
   font-weight: bold
   background: $higlightcolor
