@@ -2,7 +2,6 @@ require 'rubygems'
 require 'rack'
 require 'rack/contrib'
 require 'rack-rewrite'
-require 'rack/trystatic'
 require 'mime/types'
 require 'pony'
 
