@@ -10,17 +10,17 @@ $stdWidth: 960px
 $navWidth: 600px
 
 $ycolorb: #EFEFF4
-$ycolorc: #E3E5ED
+$ycolorc: #d7eef4
 $ycolor0: #C9CEDE
 $ycolor1: #B4B8C5 
-$ycolor2: #9CA1AD 
-$ycolor3: #868B96 
+$ycolor2: #99AACC
+$ycolor3: #8899BB
 $ycolor4: #60646C 
 $ycolor5: #51555C 
 $ycolor6: #41444A 
 $ycolor7: #303237 
 $ycolor8: #1F2024 
-$ycolor9: #0F1011
+$ycolor9: #445577
 
 // $higlightcolor:  #28C
 $higlightcolor:  $ycolor3 + #025 - #444
@@ -35,9 +35,10 @@ $main-background-color: $ycolorb
 
 // Background colors
 body
-  color: $ycolor6
+  color: $ycolor9
   margin: 0
-  font-family: Futura, Molengo, sans-serif
+  font-family: Georgia, Palatino, serif
+  line-height: 1.6em
   background: $main-background-color
   hr
     clear: both
@@ -49,6 +50,7 @@ body
     margin: 2em auto
   h1,h2,h3,h4,h5,h6
     color: $ycolor4
+    line-height: 1em
     font-weight: bold
     letter-spacing: -0.05em
     a
@@ -76,6 +78,7 @@ hgroup#maintitle
     margin: .3em
     &,a
       font-weight: normal
+      font-variant: small-caps
       color: $ycolor9
       text-shadow: 0 0 2px rgba($ycolorb,.5)
     a:hover
@@ -85,8 +88,8 @@ hgroup#maintitle
   border:
     top: solid 1px #000
     bottom: solid 1px #FFF
-  +box-shadow(rgba(#000,.6) 0 0 15px inset)
-  +linear-gradient(color-stops($ycolor4,$ycolor5))
+  +box-shadow(rgba($ycolor9,.6) 0 0 4px inset)
+  +linear-gradient(color-stops(#c7def4,#d7eef4))
 
 footer
   font-size: .8em
@@ -129,6 +132,9 @@ h1,h2
 
 =innerblock
   background-color: $ycolorc
+  background-image: url('/img/main/collines.png')
+  background-position: 0 100%
+  background-repeat: no-repeat
   +box-shadow(#FFF 0 0 3px, rgba(#000,0.2) 0 0 3px inset)
   +border-radius()
   & > *
@@ -345,12 +351,15 @@ body.support #main > article
     margin: 1em
 
 #helloblock
-  color: $ycolor1
-  text-shadow: 0 -1px 0 rgba(#000,.9)
+  color: $ycolor9
+  text-shadow: 0 0 1px #45A
   padding: 20px
   +border-radius()
-  +box-shadow(rgba(#000,.6) 0 0 15px inset)
-  +linear-gradient(color-stops($ycolor4,$ycolor5))
+  +box-shadow(rgba($ycolor9,.6) 0 0 5px inset)
+  background-color: $ycolorc
+  background-image: url('/img/main/collines.png')
+  background-position: 0 100%
+  background-repeat: no-repeat
   #logo
     float: left
     margin-right: 40px
