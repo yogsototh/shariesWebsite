@@ -45,7 +45,7 @@ def page_title
     else
         h2text=@item[:content_for_title]
     end
-    tmp=%{<h1>Sharies</h1><h2>#{h2text}<h2>}
+    tmp=%{<h1><img src="/img/main/LogoName.png" width="200px" alt="Sharies"/></h1><h2>#{h2text}<h2>}
     unless @item[:subtitle].nil? and @item[:content_for_subtitle].nil?
         if @item[:content_for_subtitle].nil?
             h3text=@item[:subtitle] 
